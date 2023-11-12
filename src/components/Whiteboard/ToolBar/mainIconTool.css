@@ -1,0 +1,53 @@
+.icon-tool {
+  cursor: pointer;
+  height: 26px;
+  border: none;
+  width: 30px;
+  display: flex;
+  align-content: center;
+  position: relative;
+  z-index: 81;
+}
+
+.icon-tool-no-he {
+  cursor: pointer;
+  width: 29px !important;
+  height: 16px;
+  overflow: hidden;
+  border: none;
+  position: relative;
+  z-index: 81;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .icon-tool {
+    width: 23px;
+    height: 20px;
+  }
+  .icon-tool-no-he {
+    width: 23px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px) {
+  .icon-tool {
+    width: 25px;
+    height: auto;
+  }
+  .icon-tool-no-he {
+    width: 25px;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1300px) and (orientation: landscape) {
+  .icon-tool {
+    width: 20px;
+    height: auto;
+  }
+  .icon-tool-no-he {
+    width: 20px;
+    height: auto;
+  }
+}

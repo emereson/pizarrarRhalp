@@ -1,0 +1,21 @@
+// COLORS
+$color-purple: rgb(174, 0, 255);
+$color-violet: #512EE4;
+$color-blue-transparent: rgba(0, 196, 248, 0.4);
+$color-blue-lite: rgba(106, 178, 255, 0.5);
+$color-blue-lite2: #3599d8;
+$color-blue-dark: #2605fb;
+$color-blue: #3f97ff;
+$color-blue-purple-dark: #2b00f9;
+$color-blue-purple: rgba(
+  $color: #aa8ee3,
+  $alpha: 0.5
+);
+$color-gray: #b8cfd3;
+
+// SIZES
+$size-iconbar-left: 36px;
+$size-iconbar-bottom: 42px;
+$margin-top: 45px;
+
+@import 'extends';

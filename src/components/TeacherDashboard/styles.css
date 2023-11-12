@@ -1,0 +1,345 @@
+.border {
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Login-input {
+  border: none;
+  color: #fff;
+  padding-left: 10px;
+  background-color: rgba(3, 0, 252, 0.2);
+  font-size: 55px;
+  height: 12vh;
+  font-weight: 200;
+}
+
+.Login-input:focus {
+  outline: none !important;
+}
+
+.Login-Icons-container {
+  grid-area: 2 / 1 / 3 / 4;
+  display: flex;
+  justify-content: center;
+  margin-top: 40;
+  flex: 0.7;
+  flex-direction: column;
+}
+
+.Login-container {
+  top: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 30%;
+  flex: 0.2 1;
+}
+
+.Icons-container {
+  z-index: 99;
+  width: 100%;
+  position: absolute;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.teacher-chat-icons-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 1000ms ease;
+}
+
+#teacher-icons-responsive {
+  display: none;
+}
+
+.-small {
+  width: 100%;
+  transition: all 1000ms ease;
+}
+
+.cursorPointer {
+  bottom: 0;
+  position: absolute;
+  width: 65px;
+  margin-left: 10px;
+  z-index: 3;
+}
+
+@media screen and (max-width: 600px) {
+  .cursorPointer {
+    width: 55px;
+    margin-left: 0;
+  }
+}
+
+.cursorPointer:hover {
+  cursor: pointer;
+}
+
+.teacher-root-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.teacher-header {
+  margin-top: 20px;
+  color: rgb(7, 7, 249);
+  width: 100%;
+  height: 10%;
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.teacher-header-title {
+  margin-bottom: 2px;
+  font-size: calc(15px + 1.7vw);
+}
+
+.teacher-header-subtitle {
+  font-size: 3vw;
+  font-size: calc(8px + 1.1vw);
+}
+
+.teacher-header-texts {
+  color: rgba(3, 0, 252);
+  width: fit-content;
+  padding: 0;
+  margin: 0;
+}
+
+.teacher-icons-responsive {
+  display: none;
+}
+
+.teacher-icons-responsive {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+@media screen and (max-width: 500px) {
+  .teacher-icons-responsive {
+    display: block;
+    width: 50%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.Single-ico-container {
+  flex: 1 0 21%;
+  /* explanation below */
+  margin: 5px;
+  height: 100px;
+}
+
+.Icon-img {
+  height: 60px;
+  width: auto;
+}
+
+.Icon-text {
+  font-size: 100%;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  line-height: 100%;
+  text-align: center;
+}
+
+.Chat-container {
+  grid-gap: 5px;
+  height: 100%;
+  display: grid;
+  grid-area: 1 / 4 / 4 / 4;
+  grid-template-rows: 85% 1fr 1fr;
+  grid-template-columns: auto 350px;
+  z-index: 1;
+}
+.chatall {
+  grid-column: 2;
+  padding-top: 10px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: auto 60px;
+}
+
+.chat-banner {
+  display: 'flex';
+  align-items: 'center';
+  margin-left: 'auto';
+}
+
+.Input-container {
+  display: flex;
+  align-items: center;
+}
+
+.Input {
+  background-color: rgba(0, 0, 0, 0.2);
+  max-width: 19vw;
+  border: none;
+  color: #fff;
+  padding-left: 10px;
+  font-size: 32px;
+  height: 7vh;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+
+.icon-home-teacher {
+  width: 64px;
+  height: auto;
+}
+
+.Input:focus {
+  outline: none !important;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.teacher-container-messages {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 70%;
+  margin-right: 20px;
+  height: 100%;
+}
+
+.plusIcon {
+  display: none;
+}
+
+.teacher-input-and-send {
+  width: 100%;
+  display: flex;
+  padding-bottom: 7px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1100px) {
+  .teacher-chat-icons-container {
+    flex-flow: column;
+    align-items: flex-start;
+    width: 10%;
+  }
+  .teacher-chat-container {
+    width: 90%;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .teacher-container-messages {
+    width: 75%;
+  }
+}
+@media screen and (max-height: 730px) {
+  .icon-home-teacher {
+    width: 55px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .teacher-chat-container {
+    width: 100%;
+    padding-right: 0;
+  }
+  .teacher-container-messages {
+    width: 100%;
+    margin-right: 0;
+  }
+  .teacher-chat-icons-container {
+    display: none;
+  }
+  #teacher-icons-responsive {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+  }
+}
+
+.-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 630px) {
+  .plusIcon {
+    width: 10%;
+    z-index: 1000;
+    justify-self: flex-start;
+    display: block;
+  }
+  .teacher-input-and-send {
+    justify-content: flex-end;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .-responsive {
+    width: 50%;
+    display: block;
+    height: 100%;
+    padding: 0 10px;
+  }
+}
+
+/* CHAT ANIMATIONS */
+
+.Teacher-Chat-enter {
+  opacity: 0;
+}
+
+.Teacher-Chat-enter-active {
+  opacity: 1;
+  transition: all 500ms ease;
+}
+.Teacher-Chat-exit {
+  opacity: 1;
+  transition: all 500ms ease;
+}
+
+.Teacher-Chat-exit-active {
+  opacity: 0;
+  transition: all 500ms ease;
+}

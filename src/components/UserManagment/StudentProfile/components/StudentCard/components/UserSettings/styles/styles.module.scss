@@ -1,0 +1,30 @@
+.userSettings{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 1%;
+    justify-content: center;
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    // background-color: aqua;
+}
+
+.input{
+    height: 16px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    // text-align: center;
+}

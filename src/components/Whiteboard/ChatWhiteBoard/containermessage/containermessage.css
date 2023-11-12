@@ -1,0 +1,45 @@
+.containermessage {
+  height: 100px;
+  padding-top: 520px;
+}
+/*
+.chagendata {
+    background-color: rgba(0, 238, 255, 0.25);
+    height: 75px;
+    width: 75.5%;
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(3,1fr);
+  }
+  */
+.item {
+  margin: auto;
+}
+.unploadimage {
+  margin: auto;
+}
+.gbandtext {
+  margin: auto;
+}
+
+.divclose {
+  padding-top: 2px;
+  margin-left: 96%;
+  margin-bottom: 2px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+}
+.MessageComp {
+  width: 100px;
+}
+
+.bellNot {
+  display: grid;
+  width: 100%;
+}
+.bellNot img {
+  display: grid;
+  width: 45px;
+  justify-self: center;
+}

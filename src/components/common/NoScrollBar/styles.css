@@ -1,0 +1,21 @@
+.no-scrollbar * ::-webkit-scrollbar {
+  background-color: transparent;
+  width: 2px;
+}
+
+.no-scrollbar *::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 15px;
+}
+
+.no-scrollbar *::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 15px;
+}
+
+.no-scrollbar *::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+.no-scrollbar *::-webkit-scrollbar {
+  display: none;
+}

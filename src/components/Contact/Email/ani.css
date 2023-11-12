@@ -1,0 +1,39 @@
+.text_area {
+  font-size: 18px;
+  font-family: Roboto, sans-serif;
+  background-color: transparent;
+  border: 0;
+  margin-right: 18px;
+  margin-left: 5px;
+  width: 98%;
+  min-height: 9rem;
+  max-height: 20rem;
+  color: white;
+}
+
+.text_area:focus {
+  outline: none;
+}
+
+@keyframes cursorP {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.text_area::placeholder {
+  color: white;
+  animation-name: cursorP;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .text_area {
+    font-size: 12px;
+  }
+}

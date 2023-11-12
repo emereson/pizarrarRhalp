@@ -1,0 +1,387 @@
+@import 'assets/scss/main/_variables';
+
+.object-opacity {
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.dragging-element {
+  position: fixed !important;
+  width: initial;
+  opacity: 0.5;
+}
+
+.save-image-loading-view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backdrop-filter: blur(2px);
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.saving-image-branak-from-gallery {
+  width: 90%;
+  height: 100%;
+  padding-left: 20px;
+  margin-left: -12.5px;
+
+  .-title {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #8a8a8a;
+    text-transform: uppercase;
+  }
+
+  .color-2 {
+    background-color: rgba(0, 109, 217, 0.4) !important;
+    color: #fff !important;
+  }
+
+  .saving-image-branak-from-gallery-btns {
+    width: 62% !important;
+    height: fit-content !important;
+    margin-bottom: 10px !important;
+    padding: 20px !important;
+    border: transparent;
+    background-color: rgba(0, 196, 248, 0.4) !important;
+
+    &:active {}
+
+    @media screen and (max-width: 750px) {
+      & {
+        padding: 5px !important;
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+}
+
+.files-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow-x: auto;
+  margin-bottom: 7px;
+  z-index: 2000;
+  transition: all 500ms ease;
+
+  .backIcon {
+    transform: rotateZ(180deg);
+    margin: 0 3px 0 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 750px) {
+      & {
+        margin: 0;
+        min-height: 15px;
+        min-width: 15px;
+      }
+    }
+  }
+
+  .twinkleTextVariantGray {
+    animation-name: twinkle2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: twinkle2;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @-moz-keyframes twinkle2 {
+    0% {
+      color: #fff;
+    }
+
+    50% {
+      color: #7a7a7a;
+    }
+
+    100% {
+      color: #fff;
+    }
+  }
+
+  @-webkit-keyframes twinkle2 {
+    0% {
+      color: #fff;
+    }
+
+    50% {
+      color: #7a7a7a;
+    }
+
+    100% {
+      color: #fff;
+    }
+  }
+
+  @keyframes twinkle2 {
+    0% {
+      color: #fff;
+    }
+
+    50% {
+      color: #7a7a7a;
+    }
+
+    100% {
+      color: #fff;
+    }
+  }
+
+  .location-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 5px;
+
+    &>p {
+      color: #ae00ffb6;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 750px) {
+        max-width: 60px;
+        max-height: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.contextMenu {
+  width: 20vw;
+  background-color: rgba(195, 136, 255, 0.4);
+  display: flex;
+  border-radius: 10px;
+  z-index: 2000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 0;
+  backdrop-filter: blur(2px);
+}
+
+.files-gallery {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  @media screen and (max-width: 750px) {
+    & {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .dropTarget {
+    width: 100%;
+    height: 100%;
+    background: rgba(195, 136, 255, 0.5);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 1.7rem;
+      color: #fff;
+      z-index: 2000;
+    }
+  }
+
+  .file-container {
+    height: 140px;
+    width: 23%;
+    max-width: 23%;
+    margin: 0 6.5px;
+    margin-bottom: 10px;
+    position: relative;
+
+    @media screen and (max-width: 750px) {
+      & {
+        width: 47.5%;
+        height: 100px;
+        min-height: 100px;
+        max-width: 90%;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+
+    .loading-container {
+      height: 100%;
+      width: calc(100% - 20px);
+      position: absolute;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color: white, $alpha: 0.9);
+
+      .bran-spinner {
+        position: absolute;
+      }
+    }
+
+    .folder-container {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      // border-radius: 0px 0px 25px 25px;
+      flex-direction: column;
+      border: 1px solid transparent;
+      align-items: center;
+      justify-content: space-around;
+      cursor: grab;
+
+      .exam-popper {
+        width: 300px;
+        border-radius: 10px;
+        background-color: #fff;
+      }
+
+      &:hover {
+        border: 1px solid rgba(195, 136, 255, 1);
+        cursor: pointer;
+      }
+
+      .deleteButton {
+        font-size: 1.2rem;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: fit-content;
+        margin: 2.5px 6px;
+        padding: 0;
+        cursor: default;
+      }
+
+      .deleteIcon {
+        width: 15px;
+        height: 15px;
+        cursor: default;
+      }
+    }
+
+    .folder-name-input {
+      font-size: 1.3rem;
+      text-align: left;
+      padding: 2.5px 10px;
+      border: none;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      color: #ae00ffb6;
+    }
+
+    .folder-name-input:focus {
+      outline: none;
+    }
+
+    .delete-container {
+      width: 18px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: default;
+
+      .confirm {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          width: 60px;
+          font-size: 14px;
+          color: $color-purple;
+          margin-left: 3px;
+        }
+      }
+
+      .delete {
+        height: 100%;
+        width: 100%;
+        transform: scale(0.75);
+        transition: all 0.15s ease-in-out;
+
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .file,
+    .add-container {
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid black;
+      }
+    }
+
+    .file {
+      height: 100%;
+      width: 100%;
+      border: 1px solid #80808087;
+      object-fit: contain;
+      background: white;
+    }
+
+    .add-container {
+      height: 100%;
+      width: 100%;
+      margin: 0 6.5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $color-blue-lite;
+
+      @media screen and (max-width: 750px) {
+        & {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+
+      .add {
+        height: 25px;
+        width: 25px;
+      }
+
+      &.disabled {
+        &:hover {
+          cursor: default;
+          border: none;
+        }
+      }
+    }
+  }
+}

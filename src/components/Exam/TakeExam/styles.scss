@@ -1,0 +1,304 @@
+.english-test-take-exam {
+  font: 100%/1.5 Source Sans Pro, Arial, Helvetica Neue, Helvetica, 'sans-serif';
+
+  --img-width: 300px;
+  --img-height: 160px;
+  --color-black: black;
+  --color-green: #61fb69;
+  --color-blue: #025fda;
+  --color-white: white;
+
+  --border-color: var(--color-blue);
+  --text-color: var(--color-blue);
+  --player-color: var(--color-blue);
+  --background-color: white;
+
+  text-align: center;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  color: var(--text-color);
+  width: 100%;
+  font-size: 1.2rem;
+
+  .checkmark-input {
+    color: #000;
+  }
+
+  .take-exam-container {
+    width: 100%;
+    max-width: 100%;
+    height: 99vh;
+    max-height: 99vh;
+    padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+
+    .exam-questions-max-parent {
+      min-height: 97vh;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      padding-top: 10px;
+      scroll-snap-align: start;
+
+      @media screen and (max-width: 750px) {
+        & {
+          padding-top: 0px;
+          min-height: 92vh;
+          width: 100%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      & {
+        height: 92vh;
+        min-height: 92vh;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+
+        .exam-questions-max-parent {
+          width: 100%;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 10px;
+          padding-top: 10px;
+          scroll-snap-align: start;
+
+        }
+      }
+    }
+  }
+
+
+  .--j-flex-end {
+    justify-content: flex-end;
+  }
+
+  .--j-center {
+    justify-content: center;
+  }
+
+  #exam-form {
+    opacity: 1;
+    transition: all 250ms ease;
+
+    &__animateX {
+      transform: translateX(-120%);
+      transition: all 350ms ease;
+    }
+
+    &__animate-X {
+      transform: translateX(120%);
+      transition: all 150ms ease;
+    }
+
+    &__animateX-jump {
+      transform: translateX(200%);
+      transition: none;
+    }
+
+    &__animate-X-jump {
+      transform: translateX(-200%);
+      transition: none;
+    }
+  }
+
+  .__opacity-0 {
+    opacity: 0 !important;
+    transition: all 500ms ease;
+  }
+
+  .respond-question-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    top: -26px;
+    background-color: transparent;
+    width: 100%;
+    margin: auto;
+    height: 100%;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+  }
+
+  .command__text {
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    background-color: transparent;
+    padding: 3px;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  .form-body {
+    box-sizing: border-box;
+    margin-top: 0px;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .question-navigator {
+    display: flex;
+    column-gap: 3rem;
+
+    .arrow-drop-down {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto;
+      color: #e7e7e7;
+
+      @media screen and (max-height: 620px) {
+        & {
+          padding-top: 15px;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        & {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .next-question,
+  .next-question:focus,
+  .prev-question,
+  .prev-question:focus {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border-radius: 8px;
+    min-width: 55px;
+    font-size: 1.1rem;
+    height: 27px;
+  }
+
+  .next-question {
+    a {
+      color: var(--color-white);
+    }
+  }
+}
+
+.tachometer-container {
+  width: 100%;
+  margin-top: 7px;
+  max-height: 220px;
+  display: flex;
+  flex-direction: row;
+  transform: scale(0.77);
+  align-items: flex-end;
+  top: 30px !important;
+  position: fixed;
+  z-index: 3;
+  justify-content: center;
+
+  @media screen and (max-width: 1000px) {
+    & {
+      transform: scale(0.74);
+    }
+  }
+
+
+  @media screen and (max-width: 870px) {
+    & {
+      transform: scale(0.7);
+    }
+  }
+
+
+
+  @media screen and (max-width: 750px) {
+    & {
+      width: 100%;
+      margin-top: 0px;
+      height: fit-content;
+      margin-bottom: 0px !important;
+      display: flex;
+      flex-flow: column-reverse;
+      align-items: center;
+      transform: scale(0.7) !important;
+      top: -27px !important;
+      padding-right: -5px;
+      justify-content: center;
+
+      &>p {
+        margin: 0 !important;
+      }
+
+      .arch-speedometer {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.tachometer-replacement {
+  width: 100%;
+  height: 25%;
+
+  &__no-image {
+    width: 100%;
+    height: 25%;
+
+    .tacho {
+      @media screen and (max-width: 750px) {
+        & {
+          transform: scale(0.8);
+          position: fixed;
+          top: -25px;
+          margin: 0 auto;
+          width: 100%;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      & {
+        display: block;
+      }
+    }
+  }
+
+  .tacho {
+    @media screen and (max-width: 750px) {
+      & {
+        transform: scale(0.6);
+        position: absolute;
+        top: -50px;
+        margin: 0 auto;
+        width: 100%;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    & {
+      height: 20%;
+    }
+  }
+}

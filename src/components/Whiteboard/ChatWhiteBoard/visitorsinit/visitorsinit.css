@@ -1,0 +1,48 @@
+.avatarSelect {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f605ff;
+  margin-right: 0px;
+}
+
+.newMessage {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #53d34f;
+  margin-right: 0px;
+}
+
+.nameVisitor {
+  font-size: 11px;
+  margin-left: 2px;
+}
+
+.VisitorsInit {
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: 12px auto;
+  grid-gap: 5px;
+  align-items: center;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.unselected-conversation {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(3, 0, 252, 0.3);
+  margin-right: 0px;
+}
+
+#conversations-menu {
+  z-index: 2;
+  padding: 8px 0;
+  overflow-y: auto;
+  margin-bottom: 80px;
+  max-width: 80px;
+  height: 85%;
+  flex-grow: 1;
+}

@@ -1,0 +1,201 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-prod-225039-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-prod-225039-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-prod-225039-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-prod-225039-deployment",
+      "UnauthRoleName": "amplify-branakfront-prod-225039-unauthRole",
+      "StackName": "amplify-branakfront-prod-225039",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-prod-225039/2335b9d0-7e5b-11ec-b7c0-12c05000775d",
+      "AmplifyAppId": "d45r546pjmip2"
+    },
+    "categories": {
+      "function": {
+        "postConfirmationLambda": {
+          "deploymentBucketName": "amplify-branakfront-prod-225039-deployment",
+          "s3Key": "amplify-builds/postConfirmationLambda-566c6b4930624957764d-build.zip"
+        },
+        "AdminQueriescf1cdf40": {
+          "deploymentBucketName": "amplify-branakfront-prod-225039-deployment",
+          "s3Key": "amplify-builds/AdminQueriescf1cdf40-56394343593968464553-build.zip"
+        },
+        "sendEmail": {
+          "deploymentBucketName": "amplify-branakfront-prod-225039-deployment",
+          "s3Key": "amplify-builds/sendEmail-6d524f2b64485a543564-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d45r546pjmip2",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-dev-225457-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-dev-225457-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-dev-225457-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-dev-225457-deployment",
+      "UnauthRoleName": "amplify-branakfront-dev-225457-unauthRole",
+      "StackName": "amplify-branakfront-dev-225457",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-dev-225457/bb4619e0-7e5b-11ec-86e9-0ed687792769",
+      "AmplifyAppId": "d45r546pjmip2"
+    },
+    "categories": {
+      "function": {
+        "postConfirmationLambda": {
+          "deploymentBucketName": "amplify-branakfront-dev-225457-deployment",
+          "s3Key": "amplify-builds/postConfirmationLambda-566c6b4930624957764d-build.zip"
+        },
+        "AdminQueriescf1cdf40": {
+          "deploymentBucketName": "amplify-branakfront-dev-225457-deployment",
+          "s3Key": "amplify-builds/AdminQueriescf1cdf40-49773839354437482f66-build.zip"
+        },
+        "sendEmail": {
+          "deploymentBucketName": "amplify-branakfront-dev-225457-deployment",
+          "s3Key": "amplify-builds/sendEmail-6d524f2b64485a543564-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d45r546pjmip2",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {}
+      }
+    }
+  },
+  "exam": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-exam-195954-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-exam-195954-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-exam-195954-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-exam-195954-deployment",
+      "UnauthRoleName": "amplify-branakfront-exam-195954-unauthRole",
+      "StackName": "amplify-branakfront-exam-195954",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-exam-195954/9c06b690-7fd5-11ec-92a6-0e0dd218c4a7",
+      "AmplifyAppId": "d45r546pjmip2"
+    },
+    "categories": {
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {},
+        "true": {}
+      },
+      "function": {
+        "postConfirmationLambda": {
+          "deploymentBucketName": "amplify-branakfront-exam-195954-deployment",
+          "s3Key": "amplify-builds/postConfirmationLambda-644e797a7a312b346b73-build.zip"
+        },
+        "AdminQueriescf1cdf40": {
+          "deploymentBucketName": "amplify-branakfront-exam-195954-deployment",
+          "s3Key": "amplify-builds/AdminQueriescf1cdf40-49773839354437482f66-build.zip"
+        },
+        "sendEmail": {
+          "deploymentBucketName": "amplify-branakfront-exam-195954-deployment",
+          "s3Key": "amplify-builds/sendEmail-6b646b4d43376c794431-build.zip"
+        },
+        "BranakAuthPostConfirmation": {
+          "GROUP": "students"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d45r546pjmip2",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "learningc": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-learningc-145319-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-learningc-145319-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-learningc-145319-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-learningc-145319-deployment",
+      "UnauthRoleName": "amplify-branakfront-learningc-145319-unauthRole",
+      "StackName": "amplify-branakfront-learningc-145319",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-learningc-145319/d9cbcd50-27cb-11ed-bc22-0a44edf44665",
+      "AmplifyAppId": "d45r546pjmip2"
+    },
+    "categories": {
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {}
+      },
+      "function": {
+        "postConfirmationLambda": {
+          "deploymentBucketName": "amplify-branakfront-learningc-145319-deployment",
+          "s3Key": "amplify-builds/postConfirmationLambda-566c6b4930624957764d-build.zip"
+        },
+        "AdminQueriescf1cdf40": {
+          "deploymentBucketName": "amplify-branakfront-learningc-145319-deployment",
+          "s3Key": "amplify-builds/AdminQueriescf1cdf40-49773839354437482f66-build.zip"
+        },
+        "sendEmail": {
+          "deploymentBucketName": "amplify-branakfront-learningc-145319-deployment",
+          "s3Key": "amplify-builds/sendEmail-6b646b4d43376c794431-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d45r546pjmip2",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "sounds": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-sounds-204916-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-sounds-204916-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-sounds-204916-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-sounds-204916-deployment",
+      "UnauthRoleName": "amplify-branakfront-sounds-204916-unauthRole",
+      "StackName": "amplify-branakfront-sounds-204916",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-sounds-204916/e10eaa50-caa6-11ed-adf2-12dc9b955b99",
+      "AmplifyAppId": "d45r546pjmip2"
+    },
+    "categories": {
+      "function": {
+        "postConfirmationLambda": {
+          "deploymentBucketName": "amplify-branakfront-sounds-204916-deployment",
+          "s3Key": "amplify-builds/postConfirmationLambda-575833564538584a524c-build.zip"
+        },
+        "AdminQueriescf1cdf40": {
+          "deploymentBucketName": "amplify-branakfront-sounds-204916-deployment",
+          "s3Key": "amplify-builds/AdminQueriescf1cdf40-5645414c6149516c7471-build.zip"
+        },
+        "sendEmail": {
+          "deploymentBucketName": "amplify-branakfront-sounds-204916-deployment",
+          "s3Key": "amplify-builds/sendEmail-4f62427a646163485351-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d45r546pjmip2",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {}
+      }
+    }
+  }
+}

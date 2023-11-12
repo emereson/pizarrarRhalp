@@ -1,0 +1,17 @@
+.buttonControlPanel {
+    width: 90px;
+    height: 20px;
+    border: 1px solid blue;
+    color: #2605fb;
+    text-align: center;
+    cursor: pointer;
+  }
+  .buttonControlPanel:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 900px) {
+    .buttonControlPanel{
+      margin: 10px;
+    }
+  }

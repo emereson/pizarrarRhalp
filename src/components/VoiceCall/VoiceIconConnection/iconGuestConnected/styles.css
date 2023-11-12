@@ -1,0 +1,17 @@
+.itemCallConnected {
+  height: 40px !important;
+  min-width: 40px;
+  position: relative;
+  padding-top: 3px;
+  text-align: center;
+  margin-right: '30px';
+}
+
+.itemCallConnected > div > img {
+  height: 26px !important;
+  vertical-align: middle;
+}
+
+.itemCallConnected > div > b {
+  text-align: center;
+}

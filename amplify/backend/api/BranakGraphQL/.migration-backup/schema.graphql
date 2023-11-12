@@ -1,0 +1,133 @@
+type WhiteBoardEvent  @model @key(name: "ByClassRoomByPage", fields: ["classRoomId", "page", "updatedAt"], queryField: "shapesByClassRoomByPage") @auth(rules: [{allow: private}]) {
+  id: ID!
+  classRoomId: ID!
+  page: Int!
+  updatedAt: String
+  payload: AWSJSON!
+}
+
+type ClassRoom @model @key(fields: ["id"]) @auth(rules: [{allow: private}]) {
+  id: ID!
+  name: String!
+  page: Int
+  backgroundImageUrl: String
+  iconsColor: String
+  isDisabled: Boolean
+  isCrystalTheme: Boolean
+  teachers: [Teacher] @connection(keyName: "teachersByClassroomId", fields: ["id"])
+  students: [Student] @connection(keyName: "studentsByClassroomId", fields: ["id"])
+}
+
+type User @model @key(fields: ["id"]) @auth(rules: [{allow: private}]) {
+  id: ID!
+  name: String
+  email: String
+  profilePicture: String
+  files: [File] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Teacher @model @key(fields: ["id"]) @key(name: "teachersByClassroomId", fields: ["classRoomId", "id"]) @auth(rules: [{allow: private}]) {
+  id: ID!
+  classRoomId: ID!
+  classRoom: ClassRoom @connection(fields: ["classRoomId"])
+  user: User @connection(fields: ["id"])
+  students: [Student] @connection(keyName: "studentsByClassroomId", fields: ["classRoomId"])
+}
+
+type Student @model @key(fields: ["id"]) @key(name: "studentsByClassroomId", fields: ["classRoomId", "id"]) @auth(rules: [{allow: private}]) {
+  id: ID!
+  classRoomId: ID!
+  classRoom: ClassRoom @connection(fields: ["classRoomId"])
+  user: User @connection(fields: ["id"])
+  evaluations: [Evaluation] @connection(keyName: "byStudent", fields: ["id"])
+}
+
+type Evaluation @model @key(fields: ["id"]) @key(name: "byStudent", fields: ["studentId", "createdAt"], queryField: "evaluationsByStudents") @auth(rules: [{allow: private}]) {
+  id: ID!
+  fileId: ID!
+  studentId: ID!
+  no: String!
+  name: String
+  process: String
+  score: Int
+  skills: Skills
+  date: String
+  file: File @connection(fields: ["fileId"])
+  createdAt: AWSDateTime
+}
+
+type Skills {
+  listenning: Int!
+  speaking: Int!
+  writting: Int!
+  reading: Int!
+}
+
+type File @model @key(fields: ["id"]) @key(name: "byUser", fields: ["userId", "createdAt"], queryField: "filesByUsers") @auth(rules: [{allow: private}]) {
+  id: ID!
+  userId: ID!
+  name: String!
+  url: String!
+  createdAt: AWSDateTime
+}
+
+type Level @model @auth(rules: [{allow: private}]) {
+  id: ID!
+  name: String!
+  studyDocumentSlides: [StudyDocumentSlide] @connection(keyName: "ByLevel", fields: ["id"])
+  orderArray: AWSJSON
+}
+
+type StudyDocumentSlide @model @key(name: "ByLevel", fields: ["levelId", "id"], queryField: "slidesByLevel") @auth(rules: [{allow: private}]) {
+  id: ID!
+  levelId: ID!
+  studyDocumentElements: [StudyDocumentElement] @connection(keyName: "ByPage", fields: ["id"])
+}
+
+enum ElementType {
+  IMAGE
+  TEXT
+}
+
+type StudyDocumentElement @model @key(fields: ["id"]) @key(name: "ByPage", fields: ["pageId"], queryField: "elementsByPage") @auth(rules: [{allow: private}]) {
+  id: ID!
+  pageId: ID!
+  type: ElementType
+  value: AWSJSON!
+}
+
+type EnglishTest @model @key(fields: ["id"]) @auth(rules: [{allow: private}]) {
+  id: ID!
+  minScore: Int
+  maxSCore: Int
+  scoreFeedback: String
+  correctAnswers: String
+  correctAnswersFeedback: String
+  inCorrectAnswers: String
+  inCorrectAnswersFeedback: String
+  selectedEvaluations: [String]
+  questions: [EnglishTestQuestion] @connection(keyName: "questionsByEnglishTest", fields: ["id"])
+}
+
+type EnglishTestQuestion @model @key(fields: ["id"]) @key(name: "questionsByEnglishTest", fields: ["englishTestId", "createdAt"], queryField: "questionsByEnglishTest") @auth(rules: [{allow: private}]) {
+  id: ID!
+  createdAt: AWSDateTime
+  englishTestId: ID!
+  statement: String
+  optionA: String
+  optionB: String
+  optionC: String
+  optionD: String
+  correctOptions: [String!]
+  image: String
+  audio: String
+  needsRecording: Boolean
+}
+
+type Subscription {
+  onUserUpdated(id: ID!): User @aws_subscribe(mutations: ["updateUser"])
+  onClassRoomUpdated(id: ID!): ClassRoom @aws_subscribe(mutations: ["updateClassRoom"])
+  onTeacherUpdated(id: ID!): Teacher @aws_subscribe(mutations: ["updateTeacher"])
+  onStudentUpdated(id: ID!): Student @aws_subscribe(mutations: ["updateStudent"])
+}
+ 

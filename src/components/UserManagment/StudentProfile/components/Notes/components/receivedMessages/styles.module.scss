@@ -1,0 +1,58 @@
+.divTitleNote {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 30%;
+}
+
+.titleNote {
+  text-align: center;
+  font-size: 16px;
+}
+
+.titleNoteTrue {
+  text-align: center;
+  font-size: 16px;
+}
+
+.cardNote {
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: start;
+}
+
+.cardNoteTrue {
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: start;
+}
+
+@media screen and (max-width: 900px) {
+  .cardNote {
+    display: none;
+  }
+
+  .cardNoteTrue{
+    display: block;
+    margin: 20px 30px;
+  }
+
+  .titleNote {
+    z-index: 1000;
+    margin: 0;
+    color: #270fc5;
+  }
+
+  .titleNoteTrue {
+    margin: 13px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .titleNote{
+    font-size: 14px;
+  }
+}

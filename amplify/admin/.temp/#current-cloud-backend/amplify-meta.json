@@ -1,0 +1,199 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-branakfront-admin-160438-authRole",
+      "UnauthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-admin-160438-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::140188814440:role/amplify-branakfront-admin-160438-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-branakfront-admin-160438-deployment",
+      "UnauthRoleName": "amplify-branakfront-admin-160438-unauthRole",
+      "StackName": "amplify-branakfront-admin-160438",
+      "StackId": "arn:aws:cloudformation:us-east-1:140188814440:stack/amplify-branakfront-admin-160438/9052e020-fea9-11ea-af5d-122daaaef175",
+      "AmplifyAppId": "d3h85sdc491qvt"
+    },
+    "categories": {
+      "auth": {
+        "userPoolGroups": {},
+        "BranakAuth": {}
+      },
+      "function": {
+        "postConfirmationLambda": {},
+        "BranakGraphQL": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3h85sdc491qvt",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "auth": {
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "BranakAuth",
+          "attributes": ["UserPoolId", "AppClientIDWeb", "AppClientID", "IdentityPoolId"]
+        }
+      ],
+      "output": {
+        "teachersGroupRole": "arn:aws:iam::140188814440:role/us-east-1_1e5KjYzHz-teachersGroupRole",
+        "administratorsGroupRole": "arn:aws:iam::140188814440:role/us-east-1_1e5KjYzHz-administratorsGroupRole",
+        "studentsGroupRole": "arn:aws:iam::140188814440:role/us-east-1_1e5KjYzHz-studentsGroupRole"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.859Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "lastPushDirHash": "NBNRQUom8pLbWavJtMTXlf2/Nls="
+    },
+    "BranakAuth": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "AppClientSecret": "1evhnt6lr8brgnsjfvcvgh095q6op5po1f5kseb0bt29kufv6r9p",
+        "UserPoolId": "us-east-1_1e5KjYzHz",
+        "AppClientIDWeb": "5hvunck3qblqfs91ct14bn0lo5",
+        "AppClientID": "5532n0g7f6udbrqqcf15mlhu7p",
+        "IdentityPoolId": "us-east-1:dfaa4df1-396c-46b6-9106-2d757d8ceb4f",
+        "IdentityPoolName": "BarnakAuthIndentityPool__admin",
+        "UserPoolName": "BranakUserPool"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.862Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/auth/BranakAuth-cloudformation-template.yml",
+        "logicalId": "authBranakAuth"
+      }
+    }
+  },
+  "api": {
+    "BranakGraphQL": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authBranakAuth"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "3ms4j3jlonfi3p3irxel2u4k4a",
+        "GraphQLAPIEndpointOutput": "https://fjinwtporvdvjid5uueyjimgpy.appsync-api.us-east-1.amazonaws.com/graphql"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.869Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiBranakGraphQL"
+      },
+      "lastPushDirHash": "yO0xhCIKS04/QtIzaa14IB/PscQ="
+    },
+    "AdminQueries": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "BranakAuth",
+          "attributes": ["UserPoolId"]
+        },
+        {
+          "category": "function",
+          "resourceName": "AdminQueriescf1cdf40",
+          "attributes": ["Arn", "Name"]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/api/admin-queries-cloudformation-template.json",
+        "logicalId": "apiAdminQueries"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.874Z",
+      "output": {
+        "ApiName": "AdminQueries",
+        "RootUrl": "https://17b4vxwduk.execute-api.us-east-1.amazonaws.com/admin"
+      },
+      "lastPushDirHash": "rZnoiv2KQcjBe1oHBQ59EoDLCXE="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "output": {},
+      "lastPushTimeStamp": "2020-10-27T18:36:22.879Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      }
+    }
+  },
+  "function": {
+    "postConfirmationLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "api",
+          "resourceName": "BranakGraphQL",
+          "attributes": ["GraphQLAPIIdOutput"]
+        },
+        {
+          "category": "auth",
+          "resourceName": "BranakAuth",
+          "attributes": ["UserPoolId"]
+        }
+      ],
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:140188814440:function:postConfirmationLambda-admin",
+        "Name": "postConfirmationLambda-admin",
+        "LambdaExecutionRole": "branakfrontLambdaRolea10b0734-admin"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.885Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/function/postConfirmationLambda-cloudformation-template.json",
+        "logicalId": "functionpostConfirmationLambda"
+      },
+      "lastBuildTimeStamp": "2020-10-23T15:12:21.471Z",
+      "lastPackageTimeStamp": "2020-10-23T15:12:21.508Z",
+      "distZipFilename": "postConfirmationLambda-4446785465336a516631-build.zip",
+      "lastPushDirHash": "lo3tXEl0ZCeswhKPQ2Zx4BzPXPk="
+    },
+    "AdminQueriescf1cdf40": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "BranakAuth",
+          "attributes": ["UserPoolId"]
+        }
+      ],
+      "lastBuildTimeStamp": "2020-10-27T18:33:57.297Z",
+      "lastPackageTimeStamp": "2020-10-27T18:34:01.317Z",
+      "distZipFilename": "AdminQueriescf1cdf40-54325a5a4e3236487737-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-branakfront-admin-160438-deployment/amplify-cfn-templates/function/AdminQueriescf1cdf40-cloudformation-template.json",
+        "logicalId": "functionAdminQueriescf1cdf40"
+      },
+      "lastPushTimeStamp": "2020-10-27T18:36:22.899Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:140188814440:function:AdminQueriescf1cdf40-admin",
+        "Name": "AdminQueriescf1cdf40-admin",
+        "LambdaExecutionRole": "AdminQueriescf1cdf40LambdaRole-admin"
+      },
+      "lastPushDirHash": "M2bzh5G05mKKgqhitdpvTzg9tmQ="
+    }
+  }
+}

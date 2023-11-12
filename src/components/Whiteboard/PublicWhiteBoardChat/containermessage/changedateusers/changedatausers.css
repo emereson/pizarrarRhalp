@@ -1,0 +1,50 @@
+/*.changeuserdata {
+    align-items: center;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+*/
+
+.chagendata {
+  background-color: rgba(0, 238, 255, 0.25);
+  height: 75px;
+  width: 75%;
+  margin-left: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+label img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.bg {
+  background-color: royalblue;
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.gbandtext img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.usericon {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.usericon img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.loading-img {
+  z-index: 5;
+}

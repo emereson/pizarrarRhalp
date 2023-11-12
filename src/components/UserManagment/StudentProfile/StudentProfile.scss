@@ -1,0 +1,369 @@
+@import 'assets/scss/main/_variables';
+
+.student-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .userSettings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .buttons {
+      margin: 10px 0;
+      margin-top: 25px;
+      color: #2605fb;
+      cursor: pointer;
+    }
+  }
+
+  .profile {
+    height: 50%;
+
+
+    .separators {
+      padding: 0 !important;
+      z-index: -1;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-graph {
+      height: 110%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-menu {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        @media only screen and (max-width: 768px) {
+          font-size: 0.8rem;
+        }
+
+        @media screen and (min-width: 1920px) {
+          font-size: 1.8rem;
+        }
+
+        a {
+          cursor: pointer;
+          text-decoration: none;
+          color: $color-blue-purple-dark;
+        }
+
+        &::before {
+          position: absolute;
+          left: -35px;
+          content: '\2022';
+          color: $color-blue-purple;
+          font-size: 54px;
+
+          @media only screen and (max-width: 768px) {
+            font-size: 40px;
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
+
+.div-menu-student{
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+  font-size: 15px;
+  width: 300px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+
+
+.div-messages{
+  width: 300px;
+  background-color: #2605fb;
+  height: 200px;
+}
+  .user-info {
+    width: 100%;
+    position: relative;
+    z-index: 99;
+
+
+    .name-container {
+      $edit-button-gap: 15px;
+      $edit-button-width: 15px;
+      position: relative;
+      top: 0px;
+
+
+      &__name {
+        position: relative;
+        right: $edit-button-gap + $edit-button-width/2;
+      }
+
+      &__edit-icon {
+        margin-right: $edit-button-gap;
+        z-index: 99;
+
+        img {
+          width: $edit-button-width;
+        }
+      }
+    }
+
+    &--edit-mode {
+      background-color: rgba($color: white, $alpha: 0.4);
+      padding: 0px 9px;
+      padding-bottom: 10px;
+      height: fit-content;
+
+      .name-container {
+        top: -4px;
+      }
+    }
+
+    .submit-container {
+      margin-top: 5px;
+
+      .saveButton {
+        font-size: 12px;
+        color: #2605fb;
+        padding: 0px 3px;
+        border: 1px solid #2605fb;
+        border-radius: 5px;
+        background-color: transparent;
+      }
+
+      &__submit {
+        display: inline;
+      }
+    }
+
+    .form-notification {
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      width: 200px;
+
+      p {
+        font-size: 0.8rem;
+        color: rgb(145, 20, 20);
+      }
+    }
+
+    .fa.fa-user {
+      font-size: 140px;
+      color: $color-gray;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  .user-settings-container {
+    position: relative;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .user-data {
+      border: 1px solid $color-blue-dark;
+    }
+
+    label,
+    input,
+    input::placeholder {
+      color: $color-blue-dark;
+      border: none;
+    }
+
+    .inlineInput {
+      margin-top: 0;
+      padding: 1px;
+    }
+  }
+
+
+  .profile-avatar {
+    cursor: pointer;
+
+
+    .webcam-container {
+      width: 100px;
+      height: 100px;
+
+      .webcam {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .picture-container {
+      &__go-back {
+        position: absolute;
+        left: 2px;
+      }
+
+      &__picture {
+        width: 100%;
+        min-width: 100px;
+        min-height: 100px;
+        width: auto;
+        margin-top: 5px;
+        padding: 0;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        
+
+        video {
+          max-width: 100px;
+          max-height: 100px;
+        }
+
+        .editor-container {
+          width: 100px;
+        }
+
+        .read-only-img {
+          border-radius: 50%;
+          padding: 10px;
+          border: 1px solid white;
+        }
+
+        canvas {
+          border-radius: 50%;
+        }
+
+        .zoom-control {
+          position: absolute;
+          cursor: pointer;
+          right: 0px;
+        }
+
+        .zoom-control--in {
+          top: 10px;
+        }
+
+        .zoom-control--out {
+          bottom: 35px;
+        }
+
+        .erase-picture {
+          position: absolute;
+          cursor: pointer;
+          left: 0;
+          top: 45%;
+
+          img {
+            width: 22px;
+          }
+        }
+
+        .editor-container {
+          cursor: pointer !important;
+        }
+      }
+    }
+
+  }
+  
+  .picture-circle-shadow {
+    position: absolute;
+    height: 100%;
+    border-radius: 80%;
+    padding: 10px;
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(65%)
+  }
+
+  .upload-picture {
+    position: relative;
+    top: -38px;
+
+    &__take-picture {
+      cursor: pointer;
+    }
+
+    &__upload-picture {
+      cursor: pointer;
+    }
+  }
+
+  .statistics {
+    position: relative;
+
+  }
+
+  .name-div-style {
+    display: flex;
+    color: rgb(209, 209, 230);
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 5px rgb(243, 243, 245), 5px 5px 5px rgb(90, 89, 153), -5px -5px 5px rgb(90, 89, 153); 
+    filter: blur(0.6px);
+    text-align: center;
+    
+  
+  }
+  
+  
+  .bottom-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+
+
+    @media screen and (min-width: 768px) {
+      height: 35vh;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .read-only-img{
+      width: 90%;
+    }
+
+    .picture-circle-shadow{
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 500px) {
+    .read-only-img{
+      width: 60%;
+    }
+  }

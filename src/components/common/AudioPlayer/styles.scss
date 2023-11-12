@@ -1,0 +1,150 @@
+.bar {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .bar__time {
+    color: var(--color-blue);
+    font-size: 1rem;
+  }
+
+  .bar__click-zone{
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+
+  .bar__progress {
+    flex: 1;
+    border-radius: 5px;
+    margin: 0 5px;
+    height: 1px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .bar__progress__knob {
+      position: relative;
+      height: 12px;
+      width: 2px;
+      background-color: var(--player-color);
+    }
+  }
+}
+
+.english-test-admin-dashboard{
+  .player {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+    .controls {
+      flex-grow: 1;
+      display: flex;  
+      align-items: center;
+    }
+  
+    .bar {
+      user-select: none;
+      display: flex;
+      align-items: center;
+      flex: 1 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+  
+      .bar__time {
+        color: white;
+        font-size: 1rem;
+      }
+  
+      .bar__click-zone{
+        width: 100%;
+        padding: 10px 0px;
+        cursor: pointer;
+      }
+  
+      .bar__progress {
+        flex: 1;
+        border-radius: 5px;
+        margin: 0 5px;
+        height: 1px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+  
+        .bar__progress__knob {
+          position: relative;
+          height: 12px;
+          width: 2px;
+          background-color: currentColor;
+        }
+      }
+    }
+  
+  }
+  
+  
+
+
+  &__light{
+    .player {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    
+      .controls {
+        flex-grow: 1;
+        display: flex;  
+        align-items: center;
+      }
+    
+      .bar {
+        user-select: none;
+        display: flex;
+        align-items: center;
+        flex: 1 0 auto;
+    
+        .bar__time {
+          color: var(--color-light-contrast);
+          font-size: 1rem;
+        }
+    
+        .bar__click-zone{
+          width: 100%;
+          padding: 10px 0px;
+          cursor: pointer;
+        }
+    
+        .bar__progress {
+          flex: 1;
+          border-radius: 5px;
+          margin: 0 5px;
+          height: 1px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+    
+          .bar__progress__knob {
+            position: relative;
+            height: 12px;
+            width: 2px;
+            background-color: currentColor;
+          }
+        }
+      }
+    
+    }
+    
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "body": {
+   "type": "booking",
+    "first_name": "Anthony",
+    "last_name": "Vargas",
+    "email": "tony_jason@hotmail.com",
+    "country": "Colombia",
+    "phone_type": "celular",
+    "person_who_req": "Para Mi",
+    "phone": "34050304",
+
+    "mailContent": "booking email ...",
+    "subject": "Booking subject"
+  }
+}

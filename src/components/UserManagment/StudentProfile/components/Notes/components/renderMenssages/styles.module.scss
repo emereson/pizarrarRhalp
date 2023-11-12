@@ -1,0 +1,28 @@
+.message {
+  white-space: pre-line;
+  word-wrap: break-word;
+  padding-bottom: 15%;
+}
+
+.postedBy {
+  text-align: left;
+}
+
+.iconContainer {
+  display: flex;
+  margin-top: -5%;
+}
+
+.iconOptions {
+  margin: 0 12px;
+}
+
+.iconOptions:first-of-type {
+  margin: 0 12px 0 0;
+}
+
+.pencil{
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}

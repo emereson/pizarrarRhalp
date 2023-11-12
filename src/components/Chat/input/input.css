@@ -1,0 +1,40 @@
+.textinput {
+  background-color: transparent;
+  height: 90%;
+  color: white;
+  font-size: 13px;
+  border: none;
+  padding-left: 5px;
+  outline: none;
+  margin-left: 5px;
+
+  font-weight: bold;
+}
+
+.exterior {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 35px;
+  display: grid;
+}
+
+.icon {
+  margin-left: 16px !important;
+  margin-top: auto;
+  margin-right: 0px;
+  cursor: pointer;
+}
+
+.menssages {
+  background-color: blue;
+  width: 300px;
+  height: 600px;
+}
+
+.iconLogin {
+  margin: 3px;
+  color: white;
+  cursor: pointer;
+  padding-bottom: 3px;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+.performance-line {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 15px;
+
+    .target {
+        background-color: rgb(230, 77, 222);
+        z-index: 3;
+    }
+
+    .actual {
+        z-index: 3;
+        background-color: rgb(41,10,226);
+    }
+
+.lineBackground{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: aliceblue;
+    margin-top: 5px;
+}
+    .indicator {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        opacity: 0.5;
+    }
+
+
+}

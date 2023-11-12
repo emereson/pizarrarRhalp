@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authBranakAuth"
+    },
+    "conflictResolution": {},
+    "apiName": "BranakGraphQL",
+    "gqlSchemaPath": "C:\\Users\\tony_\\Documents\\branak\\Branak-Front\\amplify\\backend\\api\\BranakGraphQL\\schema.graphql",
+    "additionalAuthTypes": [
+      {
+        "mode": "API_KEY",
+        "expirationTime": 365,
+        "apiKeyExpirationDate": "2023-08-04T22:56:33.653Z",
+        "keyDescription": "api-key-description"
+      },
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
+  }
+}

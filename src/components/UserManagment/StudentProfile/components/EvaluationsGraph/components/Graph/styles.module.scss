@@ -1,0 +1,41 @@
+.evaluationsGraph {
+  height: 30vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 1253px) and (max-height: 581px) {
+  .evaluationsGraph {
+    height: 27vh;
+  }
+}
+
+@media screen and (max-width: 1732px) and (max-height: 720px) {
+  .evaluationsGraph {
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 1700px) and (min-height: 700px) {
+  .evaluationsGraph {
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 1730px) and (min-height: 840px) {
+  .evaluationsGraph {
+    height: 30vh;
+  }
+}
+
+@media screen and (min-width: 1800px) and (min-height: 840px) {
+  .evaluationsGraph {
+    height: 25vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .evaluationsGraph {
+    height: 100%;
+  }
+}
+

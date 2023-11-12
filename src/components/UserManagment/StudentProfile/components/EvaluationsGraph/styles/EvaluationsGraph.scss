@@ -1,0 +1,52 @@
+@import 'assets/scss/main/_variables';
+
+.graph-container {
+  --left-offset: -5px;
+  @media screen and (min-width: 768px) {
+    --left-offset: -20px;
+  }
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  canvas {
+    height: auto !important;
+    width: 100% !important;
+    @media screen and (min-width: 768px) {
+      height: 100% !important;
+      width: auto !important;
+    }
+  }
+}
+
+.graph-title {
+  top: -20px;
+  left: 0px;
+  @media screen and (min-width: 768px) {
+    left: -10px;
+  }
+  color: $color-blue-purple-dark;
+  font-weight: 600;
+  position: absolute;
+}
+
+.graph-inner {
+  position: relative;
+  height: 100%;
+  &::before {
+    @media screen and (min-width: 1200px) {
+      content: '';
+    }
+    position: absolute;
+    left: var(--left-offset);
+    height: 100%;
+    width: 60px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+  }
+}
+
+.average-indicator{
+  position: absolute;
+  left: var(--left-offset);
+}

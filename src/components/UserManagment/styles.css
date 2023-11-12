@@ -1,0 +1,46 @@
+.login-form-links{
+  font-size: 1.075rem;
+}
+
+.inputsContainer{
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+  .login-form-links{
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login-form-links{
+    font-size: 1.1rem !important;
+  }
+  
+  label {
+    font-size: 0.9rem;
+  }
+
+  .label-movil {
+    padding-left: 25px;
+    font-size: 2rem;
+  }
+
+  .container {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding-left: 4px;
+    padding-right: 10px;
+  }
+  label,
+  .container {
+    font-size: 0.8rem;
+  }
+}

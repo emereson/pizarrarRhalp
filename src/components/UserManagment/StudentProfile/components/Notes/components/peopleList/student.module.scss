@@ -1,0 +1,33 @@
+.container {
+  position: absolute;
+}
+
+.forSpan {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.principalList {
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  margin-left: 30px;
+  margin-top: 8px;
+  border-radius: 3px;
+  width: 100px;
+}
+
+.principalList li {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 900px) {
+  .principalList li {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .forSpan {
+    font-size: 14px;
+  }
+}

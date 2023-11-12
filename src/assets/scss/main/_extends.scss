@@ -1,0 +1,19 @@
+%mode-crystal {
+  background-color: rgba($color: white, $alpha: 0.3) !important;
+  border: 1px solid white !important;
+  box-shadow: 0 0 20px 10px rgba($color: white, $alpha: 0.55) inset;
+  @media screen and (max-width: 750px) {
+    &{
+      box-shadow: 0 0 20px 10px rgba($color: white, $alpha: 0.1) inset;
+      backdrop-filter: blur(3px);
+    }
+  }
+}
+
+%scrollbar-none {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

@@ -1,0 +1,153 @@
+li {
+  cursor: pointer;
+  list-style: none;
+}
+
+.container {
+  position: absolute;
+}
+
+.forSpan {
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.principalList {
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 8px;
+  border-radius: 3px;
+  width: 115px;
+}
+
+.listContainer {
+  position: relative;
+}
+
+.secondaryLists {
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+  max-height: 65px;
+  width: 105px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.secondaryLists::-webkit-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.secondaryLists::-webkit-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.secondaryLists::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+.secondaryLists::-moz-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.secondaryLists::-moz-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.secondaryLists::-moz-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+.secondaryLists::-o-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.secondaryLists::-o-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.secondaryLists::-o-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+.listRoom {
+  padding: 5px;
+  margin-left: 20px;
+  margin-top: 5px;
+  height: 55px;
+  width: 100px;
+  position: absolute;
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.ThirdLists {
+  max-height: 75px;
+  overflow-y: auto;
+  padding: 5px;
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+  margin-left: 20px;
+  margin-top: 8px;
+  width: 110px;
+}
+
+.ThirdLists::-webkit-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.ThirdLists::-webkit-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.ThirdLists::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+@media screen and (max-width: 900px) {
+  li {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .forSpan {
+    font-size: 14px;
+  }
+
+  .secondaryLists{
+    margin-left: 40px;
+    margin-top: 8px;
+    max-height: 75px;
+  }
+
+  .listRoom{
+    margin-left: 40px;
+    margin-top: 8px;
+  }
+
+  .ThirdLists {
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,641 @@
+.slideAsImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+
+  @media screen and (max-width: 1050px) {
+    & {
+      width: 100% !important;
+      height: fit-content;
+    }
+  }
+}
+
+.slideZoomerContainer {
+  // this is the parent component that wraps the slide entire component, for dimention adjustment.
+  width: 100% !important;
+  height: 100% !important;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    display: block;
+    width: 7.5px;
+    height: 7.5px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    // background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #36338161;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #2e2c6f85;
+    cursor: grab;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: #2e2c6f85;
+    border-radius: 50%;
+  }
+
+  .photoContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    background-color: #7a7a7a7a;
+
+    .hideElement {
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .skeleton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slideSkeleton {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 1000ms ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px dotted #7a7a7a;
+    border-radius: 4px;
+
+    p {
+      font-size: 30px;
+      color: #7a7a7a;
+    }
+  }
+
+  .slideContainer {
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 250ms ease;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &__previewMode {
+      width: 1100px !important;
+      height: 900px;
+      background-color: #fff;
+      position: absolute;
+      transform: scale(0.1);
+
+      @media screen and (max-width: 2700px) {
+        width: 1250px !important;
+      }
+
+      @media screen and (max-width: 2100px) {
+        width: 1200px !important;
+      }
+
+      @media screen and (max-width: 1500px) {
+        width: 1150px !important;
+      }
+    }
+
+    .editSlide {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 1000;
+
+      &>p {
+        color: #110adc;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+
+    .paginator {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      z-index: 1000000000;
+
+      &>p {
+        color: #110adc;
+        font-size: 15px;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .noBorderRadius {
+      border-radius: 0 !important;
+    }
+
+    .preventMovingContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .resizableImages {
+      background-color: #eeeeee;
+      text-indent: -9999px;
+      box-sizing: border-box;
+      max-width: 100%;
+      max-height: 100%;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+
+    .textContainer {
+      border: 2px dotted transparent;
+      overflow-y: visible;
+      transition: all ease 200ms;
+
+      &__remarked {
+        border: 2px dotted #9a9a9a !important;
+      }
+
+      &:hover {
+        border: 2px dotted #9a9a9a;
+        cursor: text;
+      }
+
+      .remarkThis {
+        border: 3px solid #4248f97a;
+      }
+
+      .textTag {
+        width: 100%;
+        line-break: anywhere;
+        margin-top: 0;
+      }
+
+      .textInputs {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background-color: transparent !important;
+        margin-bottom: 0;
+        border: 2px solid transparent;
+        line-break: anywhere;
+        padding: 0 !important;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #110adc;
+        }
+
+        &__dotted {
+          padding: 5px 10px;
+          border-radius: 2px;
+          cursor: grab !important;
+          border: 2px dotted #9a9a9a;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          animation-name: dottedTrack;
+          animation-duration: 2s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          -webkit-animation-name: dottedTrack;
+          -webkit-animation-duration: 2s;
+          -webkit-animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+
+          &:active {
+            cursor: grabbing !important;
+          }
+
+          @-moz-keyframes dottedTrack {
+            0% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            25% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            50% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            75% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            100% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+          }
+
+          @-webkit-keyframes dottedTrack {
+            0% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            25% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            50% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            75% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            100% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+          }
+
+          @keyframes dottedTrack {
+            0% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            25% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            50% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+
+            75% {
+              opacity: 1;
+              border: 3px dotted #4685e3;
+            }
+
+            100% {
+              opacity: 1;
+              border: 3px dotted #9a9a9a;
+            }
+          }
+        }
+      }
+    }
+
+    &__editContainer {
+      background-color: #fff;
+      position: relative;
+      transition: all 1000ms ease;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      box-shadow: 0 0 15px #0000007a;
+      overflow: hidden;
+
+      .clickeableDismissArea {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .selectionContainer {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .editSlide {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1000;
+
+        &>p {
+          color: #110adc;
+          font-size: 18px;
+          cursor: pointer;
+        }
+      }
+
+      .noBorderRadius {
+        border-radius: 0 !important;
+      }
+
+      .resizableImages {
+        text-indent: -9999px;
+        // border-radius: 10px;
+        // width: 100%;
+        box-sizing: border-box;
+        max-width: 100%;
+        max-height: 100%;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
+        &__dottedBorder {
+          border: 3px dotted transparent;
+          overflow: visible;
+
+          &:hover {
+            border: 3px dotted #7a7a7a;
+          }
+
+
+          .verticalDots {
+            width: 20px;
+            height: 105% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            cursor: crosshair;
+            position: absolute;
+
+            .grabDot {
+              width: 10px;
+              border-radius: 50%;
+              height: 10px;
+              background-color: #fff;
+              border: 1px solid #7a7a7a;
+            }
+          }
+
+          .horizontalDots {
+            width: 100%;
+            height: 20px !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+
+            .grabDot {
+              width: 10px;
+              border-radius: 50%;
+              background-color: #fff;
+              height: 10px;
+              border: 1px solid #7a7a7a;
+            }
+          }
+        }
+      }
+
+      .textContainer {
+        border: 2px dotted transparent;
+        overflow-y: visible;
+        transition: all ease 200ms;
+
+        &__remarked {
+          border: 2px dotted #9a9a9a !important;
+        }
+
+        &:hover {
+          border: 2px dotted #9a9a9a;
+          cursor: text;
+        }
+
+        .noRemark {
+          border: 0px solid transparent;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 5px 0;
+        }
+
+        .remarkThis {
+          border: 0px dotted #9a9a9a;
+          cursor: text;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 5px 0;
+        }
+
+        .textTag {
+          width: 90%;
+          line-break: anywhere;
+          margin-top: 0;
+        }
+
+        .textInputs {
+          width: 100%;
+          height: 100%;
+          border: 0;
+          background-color: transparent !important;
+          margin-bottom: 0;
+          border: 2px solid transparent;
+          line-break: anywhere;
+          padding: 0 !important;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            color: #110adc;
+          }
+
+          &__dotted {
+            padding: 5px 10px;
+            border-radius: 2px;
+            cursor: grab !important;
+            border: 2px dotted #9a9a9a;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            animation-name: dottedTrack;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: dottedTrack;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-timing-function: linear;
+            -webkit-animation-iteration-count: infinite;
+
+            &:active {
+              cursor: grabbing !important;
+            }
+
+            @-moz-keyframes dottedTrack {
+              0% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              25% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              50% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              75% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              100% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+            }
+
+            @-webkit-keyframes dottedTrack {
+              0% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              25% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              50% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              75% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              100% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+            }
+
+            @keyframes dottedTrack {
+              0% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              25% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              50% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+
+              75% {
+                opacity: 1;
+                border: 3px dotted #4685e3;
+              }
+
+              100% {
+                opacity: 1;
+                border: 3px dotted #9a9a9a;
+              }
+            }
+          }
+        }
+
+        .verticalDots {
+          width: 20px;
+          height: 110% !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          cursor: crosshair;
+
+          .grabDot {
+            width: 10px;
+            border-radius: 50%;
+            height: 10px;
+            background-color: #fff;
+            border: 1px solid #7a7a7a;
+          }
+        }
+
+        .horizontalDots {
+          width: 100%;
+          height: 10px !important;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+
+          .grabDot {
+            width: 10px !important;
+            border-radius: 50%;
+            background-color: #fff;
+            height: 10px !important;
+            border: 1px solid #7a7a7a;
+          }
+        }
+      }
+    }
+  }
+}

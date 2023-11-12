@@ -1,0 +1,19 @@
+/* Question Appearing animations */
+
+.Question-Animation-enter {
+  opacity: 0;
+}
+
+.Question-Animation-enter-active {
+  opacity: 1;
+  transition: all 500ms ease;
+}
+.Question-Animation-exit {
+  opacity: 1;
+  transition: all 500ms ease;
+}
+
+.Question-Animation-exit-active {
+  opacity: 0;
+  transition: all 500ms ease;
+}

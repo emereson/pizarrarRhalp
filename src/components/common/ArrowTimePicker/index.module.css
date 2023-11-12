@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.text {
+  display: flex;
+  font-size: 25px;
+  color: white;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  position: absolute;
+  right: -50px;
+}
+
+.dots {
+  animation: toggle 1s infinite linear none;
+}
+
+.clock {
+  margin-bottom: 14px;
+  margin-right: 15px;
+}
+
+@keyframes toggle {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 20px;
+  }
+
+  .clock {
+    width: 20px;
+  }
+}

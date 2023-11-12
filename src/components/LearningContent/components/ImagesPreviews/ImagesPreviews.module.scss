@@ -1,0 +1,53 @@
+.slideItemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .slideNumber {
+    color: #110adc;
+    font-size: 14px;
+    font-weight: 600;
+    // max-width: 10px;
+    margin-right: 2px;
+  }
+
+  .slideItem {
+    width: 150px;
+    min-height: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 7.5px;
+    display: flex;
+    transition: all 500ms ease;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &__selected {
+      background-color: #81338142;
+      transition: all 500ms ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #81338142 !important;
+        transition: all 500ms ease;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transition: all 500ms ease;
+    }
+
+    .slidesListImage {
+      width: 100%;
+      max-width: 130px;
+      text-indent: -9999px;
+      height: 100%;
+      border-radius: 2px;
+      box-sizing: border-box;
+    }
+  }
+}

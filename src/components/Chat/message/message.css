@@ -1,0 +1,104 @@
+.avatar-container {
+  padding-top: 12px;
+}
+
+.avatar {
+  display: fixed;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #16008f;
+  border-radius: 50%;
+}
+
+.avatarUser {
+  display: fixed;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #f605ff;
+  border-radius: 50%;
+}
+
+.text-colorU {
+  color: #f605ff;
+}
+
+.text-colorT {
+  color: #16008f;
+}
+
+.avatarD {
+  display: fixed;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.text-colorD {
+  color: #ffffff;
+}
+
+.messageDoc {
+  margin-left: 2px;
+  text-justify: auto;
+  display: grid;
+  grid-template-rows: 13px 1fr 13px;
+  font-size: 13.2px;
+  height: auto;
+  align-self: center;
+}
+
+.message {
+  margin: 0px 10px 0px 0px;
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+
+.message > h5 {
+  margin-bottom: 0px !important;
+}
+.message h5,
+p {
+  padding-bottom: 0px;
+}
+
+.messageDoc h5 {
+  font-size: 12px;
+}
+
+.messageDoc p {
+  margin-bottom: 0px;
+}
+.timeD {
+  font-size: 9px;
+  margin-left: 5px;
+}
+
+.timeT {
+  font-size: 9px;
+  margin-left: 5px;
+  color: #16008f;
+}
+
+.image {
+  width: 32px;
+  height: 32px;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  margin: auto 10px;
+}
+
+.changeColorToBlue {
+  color: #16008f;
+}
+
+.changeColorTowhite {
+  color: white;
+}
+
+.changeColorToViolet {
+  color: #f605ff;
+}

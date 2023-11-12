@@ -1,0 +1,384 @@
+.home-container {
+  display: flex;
+  height: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.home-header {
+  margin-top: 20px;
+  color: rgb(7, 7, 249);
+  width: 100%;
+  height: 10%;
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-header-title {
+  margin-bottom: 2px;
+  font-size: calc(15px + 1.7vw);
+}
+
+.home-header-subtitle {
+  font-size: 3vw;
+  font-size: calc(8px + 1.1vw);
+}
+
+.active-chat {
+  background-color: red;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.Icons-container {
+  z-index: 99;
+  /* top: 40%; */
+  position: absolute;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  transition: max-width 1s;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 60px;
+}
+
+.Single-ico-container {
+  flex: 1 0 21%;
+  /* explanation below */
+  margin: 5px;
+  height: 100px;
+}
+
+.Icon-img {
+  height: 60px;
+  width: auto;
+}
+
+.Icon-text {
+  font-size: 100%;
+  color: #fff;
+  font-weight: 700;
+  width: 100%;
+  line-height: 100%;
+  text-align: center;
+}
+.icon-home {
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Icons-container {
+    flex-direction: column;
+    top: 5%;
+    height: 90%;
+    width: 17% !important;
+    padding-left: 3px;
+    left: 0;
+    z-index: 99;
+  }
+  .home-header-title {
+    font-size: 35px;
+  }
+
+  .home-header-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+  .Icons-container {
+    flex-direction: column;
+    top: 5%;
+    height: 90%;
+    z-index: 99;
+    width: 17% !important;
+    padding-left: 3px;
+    left: 0;
+  }
+}
+
+/*movil mediano  */
+
+@media screen and (min-width: 366px) and (max-width: 480px) {
+  .Icons-container {
+    flex-direction: column;
+    top: 5%;
+    height: 90%;
+  }
+}
+
+/*movil mediano pequeño */
+
+@media (max-width: 365px) {
+  .Icons-container {
+    flex-direction: column;
+    top: 5%;
+    height: 90%;
+    width: 17% !important;
+    padding-left: 3px;
+  }
+  .Icon-img {
+    height: 38px !important;
+    width: auto;
+  }
+  .Icon-text {
+    display: none;
+  }
+  .visible {
+    display: none !important;
+  }
+}
+
+/* */
+
+#icon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0px !important;
+  transition: all 1000ms ease;
+  padding-right: 0px !important;
+}
+
+#icon-container-s {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  padding-left: 0px !important;
+  transition: all 1000ms ease;
+  padding-right: 0px !important;
+}
+
+#icon-container > div {
+  height: 100%;
+  width: 100%;
+}
+
+#icon-container-s > div {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  #icon-container-s {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #icon-container-s {
+    width: 100%;
+  }
+
+  .visible {
+    flex-direction: column !important;
+    width: 100px !important;
+  }
+}
+.chat-icons-container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 1000ms ease;
+}
+.small {
+  width: 100%;
+  transition: all 1000ms ease;
+}
+
+@media screen and (max-width: 890px) {
+  #icon-container-s {
+    width: 100%;
+    height: 90%;
+  }
+  #icon-container {
+    width: 40%;
+    height: 90%;
+  }
+  #horizontal-layout {
+    flex-flow: column !important;
+    padding-left: 20px;
+  }
+  .icon-column {
+    width: fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #icon-container-s {
+    height: 100%;
+    width: 30%;
+  }
+  #icon-container {
+    width: 30%;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #icon-container-s {
+    width: 100%;
+    height: 90%;
+    z-index: 3;
+  }
+  #icon-container {
+    z-index: 3;
+    width: 30%;
+    margin-top: 100px;
+    height: 77%;
+  }
+  .visible {
+    display: none;
+  }
+}
+
+.icon-text {
+  font-size: 100%;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  line-height: 100%;
+}
+
+.icon-tooltip {
+  position: relative;
+  top: -10px;
+  background-color: rgba(3, 0, 252, 0.2);
+  font-weight: bold;
+  color: white;
+  padding: 3px;
+  display: none;
+  text-align: center;
+  /*white-space:nowrap;*/
+  margin: auto;
+}
+
+.icon {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon > .icon-content {
+  z-index: 100;
+}
+
+.icon > .icon-content > a {
+  text-decoration: none;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+.icon #key-img {
+  width: 60%;
+}
+
+.icon #info-img,
+.icon #share-img {
+  min-width: 60px;
+}
+
+.icon-column {
+  padding: 0 !important;
+  width: 16.6%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon > div {
+  margin: auto;
+}
+
+.dynamic-icon {
+  position: fixed;
+  width: 12%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#horizontal-layout {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  z-index: 3;
+  justify-content: space-between;
+  align-self: center;
+}
+
+@media (max-width: 575.98px) {
+  #horizontal-layout {
+    flex-direction: column !important;
+  }
+  .HomeLayout {
+    width: 92% !important;
+  }
+  .icon-column {
+    width: 15%;
+  }
+  .icon-text {
+    position: relative;
+    top: -9px;
+  }
+  .icon-text {
+    font-size: 0.75rem;
+    width: 47px;
+  }
+  .icon-text-align {
+    margin-top: 10px;
+  }
+  .icon-text-align-contact {
+    margin-top: 5px;
+  }
+  .icon #info-img,
+  .icon #share-img,
+  .icon #companies-img,
+  .icon #booking-img {
+    min-width: 47px;
+  }
+  .icon #key-img {
+    width: 70%;
+  }
+}

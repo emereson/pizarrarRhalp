@@ -1,0 +1,20 @@
+# Default Exam
+mutation createExam {
+  createExam(input: {id: "joinBranakTest"}) {
+    id
+  }
+}
+
+mutation createExamSection {
+  createExamSection(input: {id: "1", examId: "joinBranakTest"}){
+    id
+    examId
+  }
+}
+
+mutation createExamQuestion {
+  createExamQuestion(input: {id: "1", examSectionId: "1"}){
+    id
+    examSectionId
+  }
+}

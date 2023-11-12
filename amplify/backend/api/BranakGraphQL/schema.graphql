@@ -1,0 +1,267 @@
+type WhiteBoardEvent @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  classRoomId: ID!
+    @index(
+      name: "ByClassRoomByPage"
+      queryField: "shapesByClassRoomByPage"
+      sortKeyFields: ["page", "updatedAt"]
+    )
+  page: Int!
+  updatedAt: String
+  payload: AWSJSON!
+}
+
+type ClassRoom @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  name: String!
+  page: Int
+  backgroundImageUrl: String
+  iconsColor: String
+  blur: Int
+  isDisabled: Boolean
+  isCrystalTheme: Boolean
+  teachers: [Teacher] @hasMany(indexName: "teachersByClassroomId", fields: ["id"])
+  students: [Student] @hasMany(indexName: "studentsByClassroomId", fields: ["id"])
+}
+
+type User @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  name: String
+  email: String
+  profilePicture: String
+  files: [File] @hasMany(indexName: "byUser", fields: ["id"])
+}
+
+type Teacher @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  classRoomId: ID! @index(name: "teachersByClassroomId", sortKeyFields: ["id"])
+  classRoom: ClassRoom @belongsTo(fields: ["classRoomId"])
+  user: User @hasOne(fields: ["id"])
+  students: [Student]
+    @hasMany(indexName: "studentsByClassroomId", fields: ["classRoomId"])
+  callingState: String
+  callingInit: String
+  callingBlock: String
+  callingOneBlock: String
+}
+
+type Student @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  classRoomId: ID! @index(name: "studentsByClassroomId", sortKeyFields: ["id"])
+  classRoom: ClassRoom @belongsTo(fields: ["classRoomId"])
+  user: User @hasOne(fields: ["id"])
+  evaluations: [Evaluation] @hasMany(indexName: "byStudent", fields: ["id"])
+  callingState: String
+  callingInit: String
+  callingBlock: String
+  callingOneBlock: String
+}
+
+type Evaluation @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  fileId: ID!
+  studentId: ID!
+    @index(
+      name: "byStudent"
+      queryField: "evaluationsByStudents"
+      sortKeyFields: ["createdAt"]
+    )
+  no: String!
+  name: String
+  process: String
+  score: Int
+  skills: Skills
+  date: String
+  file: File @hasOne(fields: ["fileId"])
+  createdAt: AWSDateTime
+}
+
+type Skills {
+  listenning: Int!
+  speaking: Int!
+  writting: Int!
+  reading: Int!
+}
+
+type File @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  userId: ID!
+    @index(name: "byUser", queryField: "filesByUsers", sortKeyFields: ["createdAt"])
+  name: String!
+  url: String!
+  mode: String
+  currentFolder: String
+  createdAt: AWSDateTime
+}
+
+type Level @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String!
+  studyDocumentSlides: [StudyDocumentSlide] @hasMany(indexName: "ByLevel", fields: ["id"])
+  orderArray: AWSJSON
+}
+
+type StudyDocumentSlide @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  levelId: ID! @index(name: "ByLevel", queryField: "slidesByLevel", sortKeyFields: ["id"])
+  studyDocumentElements: [StudyDocumentElement]
+    @hasMany(indexName: "ByPage", fields: ["id"])
+}
+
+enum ElementType {
+  IMAGE
+  TEXT
+}
+
+type StudyDocumentElement @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  pageId: ID! @index(name: "ByPage", queryField: "elementsByPage")
+  type: ElementType
+  value: AWSJSON!
+}
+
+type Exam
+  @model
+  @auth(rules: [{ allow: private }, { allow: public, operations: [read] }]) {
+  id: ID! @primaryKey
+  minScore: Int
+  maxSCore: Int
+  scoreFeedback: String
+  correctAnswers: String
+  correctAnswersFeedback: String
+  inCorrectAnswers: String
+  inCorrectAnswersFeedback: String
+  ranks: AWSJSON
+  selectedEvaluations: [String]
+  examSections: [ExamSection] @hasMany(indexName: "sectionsByExam", fields: ["id"])
+  examColorScheme: String
+}
+
+type Global @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  imageUrl: String
+  homeImageUrl: String
+}
+
+type ExamSection
+  @model
+  @auth(rules: [{ allow: private }, { allow: public, operations: [read] }]) {
+  id: ID! @primaryKey
+  command: String
+  createdAt: AWSDateTime
+  examId: ID!
+    @index(
+      name: "sectionsByExam"
+      queryField: "sectionsByExam"
+      sortKeyFields: ["createdAt"]
+    )
+  questions: [ExamQuestion] @hasMany(indexName: "questionsByExamSection", fields: ["id"])
+}
+
+type ExamQuestion
+  @model
+  @auth(rules: [{ allow: private }, { allow: public, operations: [read] }]) {
+  id: ID! @primaryKey
+  createdAt: AWSDateTime
+  examSectionId: ID!
+    @index(
+      name: "questionsByExamSection"
+      queryField: "questionsByExamSection"
+      sortKeyFields: ["createdAt"]
+    )
+  statement: String
+  optionA: String
+  optionB: String
+  optionC: String
+  optionD: String
+  correctOptions: [String!]
+  image: String
+  audio: String
+  needsRecording: Boolean
+}
+
+type SlideObjectCoords @model @auth(rules: [{ allow: public }]) {
+  id: ID! @primaryKey
+  x: Int
+  y: Int
+}
+
+type SlideImage @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  x: String
+  y: String
+  width: String
+  height: String
+  imageUrl: String
+  styles: String
+  coords: SlideObjectCoords @hasOne
+}
+
+type SlideText @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  x: String
+  y: String
+  width: String
+  height: String
+  text: String
+  styles: String
+  coords: SlideObjectCoords @hasOne
+}
+
+type LearningContentSlide @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  timestamp: String
+  texts: [SlideText] @hasMany
+  images: [SlideImage] @hasMany
+  exportedImage: String
+  numberToSort: Int
+  minCalification: Int
+  realCalification: Int
+}
+
+type StudentsLevels @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  content: String
+  slides: [LearningContentSlide] @hasMany
+}
+
+type UserStudyProgress @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  owner: String
+  name: String
+  progress: Int
+  lastSlideID: String
+  level: String
+}
+type Subscription {
+  onUserUpdated(id: ID!): User @aws_subscribe(mutations: ["updateUser"])
+  onClassRoomUpdated(id: ID!): ClassRoom @aws_subscribe(mutations: ["updateClassRoom"])
+  onTeacherUpdated(id: ID!): Teacher @aws_subscribe(mutations: ["updateTeacher"])
+  onStudentUpdated(id: ID!): Student @aws_subscribe(mutations: ["updateStudent"])
+  onChangeBackgroundNote(id: ID!): BackgroundNote @aws_subscribe(mutations: ["updateBackgroundNote"])
+}
+
+# esquema de la nota (mensajes)
+
+type textNote @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  message: String
+  from: String
+  for: String
+  date: String
+  role: String
+  type: String
+  createBy: String
+  fontSize: Int
+  fontFamily: String
+  fontColor: String
+  deadline: String
+  typing: Boolean
+}
+
+# esquema de la nota (diseño de la nota)
+
+type BackgroundNote @model @auth(rules: [{ allow: private }]) {
+  id: ID! @primaryKey
+  BackgroundColor: String
+}

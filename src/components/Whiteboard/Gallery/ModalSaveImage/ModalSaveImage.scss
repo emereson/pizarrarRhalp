@@ -1,0 +1,244 @@
+@import 'assets/scss/main/_variables';
+
+.modal-backdrop.show {
+  opacity: 0 !important;
+}
+
+.modal-form .modal-content {
+  height: auto !important;
+}
+
+.modal-save .modal-content {
+  height: 500px;
+  width: 670px;
+  margin: auto;
+  border: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  .modal-dialog {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    h2 {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #8a8a8a;
+    }
+
+    .btn-container {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      a,
+      button {
+        height: 100px;
+        width: 200px;
+        border-radius: 8px;
+        margin: 0 20px;
+        border: none;
+        color: black !important;
+        background-color: rgba(0, 196, 248, 0.4) !important;
+
+        p {
+          font-size: 20px;
+          margin: 0;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:disabled {
+          cursor: default;
+
+          &:hover {
+            transform: none;
+          }
+        }
+
+        @media screen and (max-width: 750px) {
+          & {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .row {
+      justify-content: center;
+    }
+
+    .form-container {
+      width: 320px;
+      position: relative;
+      margin-bottom: 80px;
+      padding: 10px;
+      background-color: #e0f5ff96 !important;
+      text-align: left;
+      overflow: hidden;
+
+      .inputAndLabel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 270px;
+        margin-bottom: 20px;
+        margin-left: 16.5px;
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      form {
+        label,
+        p {
+          width: 28%;
+          text-transform: capitalize;
+          font-size: 1.3rem;
+          font-weight: 200;
+        }
+
+        p {
+          margin-bottom: 6px;
+          font-weight: 200;
+        }
+
+        input {
+          width: 72%;
+          background-color: transparent;
+          border: 1px solid black;
+
+          &:focus {
+            outline: none;
+          }
+
+          &#no {
+            width: 40%;
+            margin-right: auto;
+          }
+
+          &.error {
+            border-color: red;
+          }
+        }
+
+        .studentPopper {
+          width: 72%;
+          background-color: transparent;
+          border: 1px solid black;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            margin-bottom: 0;
+            width: fit-content;
+            margin-right: 5px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &#no {
+            width: 15%;
+          }
+
+          &.error {
+            border-color: red;
+          }
+        }
+
+        .accordion {
+          margin: 20px 0;
+
+          .input-skill {
+            label {
+              width: 28%;
+            }
+
+            input {
+              width: 100%;
+
+              @media screen and (max-width: 750px) {
+                & {
+                  margin-left: 25px;
+                }
+              }
+            }
+          }
+
+          button {
+            display: block;
+            margin: auto;
+            text-align: center;
+
+            &.disabled {
+              cursor: default;
+              color: #0000009e;
+            }
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+
+        .options {
+          width: 100%;
+          position: absolute;
+          right: 0;
+          bottom: 5px;
+          left: 0;
+          display: inline-flex;
+          justify-content: space-between;
+
+          button {
+            font-size: 1.4rem;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+    .files-gallery {
+      .file-container {
+        height: 120px;
+      }
+    }
+  }
+}

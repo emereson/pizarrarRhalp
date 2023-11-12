@@ -1,0 +1,66 @@
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.15);
+    border-radius: 5px;
+    // background-color: brown;
+}
+
+.divTop{
+position: relative;
+width: 100%;
+}
+.imgPencil{
+    height: 15px;
+}
+.userName {
+    display: flex;
+    color: rgb(209, 209, 230);
+    justify-content: center;
+    align-items: center;
+    // text-shadow: 0 0 5px rgb(243, 243, 245), 5px 5px 5px rgb(90, 89, 153),
+    //   -5px -5px 5px rgb(90, 89, 153);
+    // filter: blur(0.5px);
+    text-align: center;
+    width: 200px;
+    p {
+      -webkit-text-stroke: 1px rgb(92, 86, 146); /* para navegadores basados en WebKit */
+      text-stroke: 0.5px rgb(0, 4, 248); /* para otros navegadores */
+      color: white; /* color del texto */
+      font-size: 18px; /* tamaño de la fuente */
+    }
+  }
+
+  .userSettings{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 1%;
+    justify-content: center;
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    // background-color: aqua;
+}
+
+.input{
+    height: 16px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    // text-align: center;
+}

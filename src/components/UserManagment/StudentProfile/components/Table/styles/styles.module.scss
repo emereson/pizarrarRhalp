@@ -1,0 +1,155 @@
+.Table {
+  width: 100%;
+  height: 400px;
+}
+
+.titlesTable {
+  display: flex;
+  background-color: rgb(36, 116, 236, 0.2);
+  color: aqua;
+  height: 16px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 50%;
+  padding-bottom: 5%;
+}
+
+.date{
+  margin-left: 8%;
+}
+
+
+.procces{
+  margin-left: 25.5%;
+}
+
+.score{
+  margin-left: 24%;
+}
+
+.practiceNumber{
+  margin-left: 9%;
+}
+
+.name{
+  margin-left: 7%;
+}
+
+@media (max-width: 1250px) {
+
+  .Table {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+   
+  .practiceNumber{
+    margin-left: 5%;
+  }
+
+  .name{
+    margin-left: 4%;
+  }
+
+  .date{
+    margin-left: 9%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .container{
+    width: 100%;
+  }
+  
+  .practiceNumber{
+    margin-left: 7%;
+  }
+
+  .name{
+    margin-left: 4%;
+  }
+
+  .date{
+    margin-left: 9%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .practiceNumber{
+    margin-left: 12%;
+  }
+
+  .name{
+    margin-left: 4%;
+  }
+
+  .date{
+    margin-left: 9%;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .titlesTable{
+    padding: 0 10px;
+  }
+
+  .score{
+    margin-left: 15%;
+  }
+
+  .date{
+    margin-left: 3%;
+  }
+
+  .practiceNumber{
+    margin-left: 9%;
+  }
+
+  .name{
+    margin-left: 3%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .titlesTable{
+    padding: 0 10px;
+  }
+
+  .score{
+    margin-left: 13%;
+  }
+
+  .date{
+    margin-left: 3%;
+  }
+
+  .practiceNumber{
+    margin-left: 9%;
+  }
+
+  .name{
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .score{
+    margin-left: 10%;
+  }
+}

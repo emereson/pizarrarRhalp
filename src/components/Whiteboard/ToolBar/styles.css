@@ -1,0 +1,27 @@
+.tool_bar_styles {
+  top: 0;
+  margin: 0px;
+  padding-left: 2px;
+  padding-top: 10px;
+}
+
+@media screen and (max-height: 650px) {
+  .tool_bar_styles {
+    max-height: 500px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .tool_bar_styles {
+    max-height: 465px;
+    height: 465px;
+  }
+}
+
+@media screen and (max-height: 570px) {
+  .tool_bar_styles {
+    max-height: 439px;
+    height: 439px;
+  }
+}

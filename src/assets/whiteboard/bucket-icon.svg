@@ -1,0 +1,17 @@
+<svg version="1.1" class="svg-icon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="26.75px" viewBox="3.506 0 28 26.75" enable-background="new 3.506 0 28 26.75" xml:space="preserve" style="stroke: black;">
+<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M16.048,3.115c0.353-0.354,0.706-0.708,1.059-1.063
+	c0.045-0.046,0.091-0.087,0.136-0.128"></path>
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M17.244,1.924c0.013-0.012,0.026-0.024,0.038-0.035
+	c0-0.001,0-0.002,0-0.002"></path>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="16.048" y1="3.115" x2="17.244" y2="1.924"></line>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="17.281" y1="1.886" x2="17.244" y2="1.924"></line>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="17.872" y1="1.299" x2="18.072" y2="1.1"></line>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="17.281" y1="1.886" x2="17.872" y2="1.299"></line>
+	<rect x="7.66" y="5.538" transform="matrix(-0.7031 0.7111 -0.7111 -0.7031 38.5237 10.6763)" fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" width="18.746" height="15.686"></rect>
+	<ellipse class="fill" cx="20.451" cy="9.13" rx="1.383" ry="1.401" style="fill: black;"></ellipse>
+	<line fill="none" stroke="#000000" stroke-width="1.5" stroke-miterlimit="10" x1="19.642" y1="8.861" x2="10.178" y2="5.167"></line>
+	<path class="fill" d="M29.995,12.337c0.128,0.206,0.255,0.401,0.374,0.601c0.329,0.545,0.646,1.096,0.892,1.685
+	c0.082,0.198,0.162,0.397,0.186,0.611c0.044,0.389-0.067,0.739-0.315,1.036c-0.394,0.472-0.906,0.652-1.502,0.499
+	c-0.604-0.155-0.961-0.567-1.084-1.178c-0.053-0.261,0.007-0.51,0.096-0.754c0.171-0.472,0.405-0.914,0.651-1.35
+	C29.512,13.1,29.744,12.721,29.995,12.337z" style="fill: black;"></path>
+</svg>

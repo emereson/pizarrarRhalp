@@ -1,0 +1,102 @@
+@import 'assets/scss/main/_variables';
+
+.containerDataTable {
+  margin-bottom: 50px;
+  zoom: 85%;
+  height: 100%;
+  position: relative;
+  padding-left: 10%;
+   & > div {
+    overflow-x: hidden;
+  }
+
+  // Styles custom in table
+  div[role='rowgroup'] {
+    margin-top: 8px;
+
+    div[role='row'] {
+      min-height: 18px;
+
+      div[role='columnheader'] {
+        &:hover,
+        &:focus {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  // Hidden scrollbar
+  .rdt_TableBody {
+    @extend %scrollbar-none;
+  }
+
+  @media screen and (min-height: 1000px) {
+    zoom: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    padding-right: 0;
+    width: 100%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    //top: 43px;
+    right: 0;
+    height: 100%;
+    width: 76px;
+
+
+    @media screen and (max-width: 768px) {
+      content: none;
+    }
+  }
+
+  img.arrow {
+    position: absolute;
+
+    &.blue {
+      display: block;
+      left: 0;
+      right: 0;
+      margin: auto;
+      text-align: center;
+
+      &.up {
+        top: 30px;
+      }
+
+      &.down {
+        position: absolute;
+        top: 99%;
+        transform: rotate(180deg);
+      }
+    }
+
+    &.right {
+      width: 20px;
+      top: 50%;
+      right: -20px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .containerDataTable{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .containerDataTable{
+    zoom: 75%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .containerDataTable{
+    zoom: 70%;
+  }
+}

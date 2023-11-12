@@ -1,0 +1,13 @@
+.gridColors{
+    display: grid;
+    grid-template-columns: repeat(8, 12px);
+    gap: 1px;
+    background: #fff;
+    padding: 1px;
+}
+
+.itemColor{
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+}

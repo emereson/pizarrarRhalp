@@ -1,0 +1,129 @@
+.live-container {
+  position: fixed;
+  cursor: pointer;
+  margin-right: 6px;
+  display: flex;
+  z-index: 999;
+  padding: 10px 10px;
+}
+
+.clasic-model__canvas .live-container {
+  top: 0;
+  right: 0;
+}
+
+.modern-model__canvas .live-container {
+  top: 5%;
+  right: 5%;
+}
+
+.live-p {
+  margin-right: 3px;
+  margin-top: 15px;
+  color: white;
+}
+
+.live-icon {
+  height: 35px !important;
+  width: auto !important;
+}
+
+/* Jagoda */
+.cbutton--effect-jagoda::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cbutton--effect-jagoda::after {
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+
+.cbutton--effect-jagoda::before,
+.cbutton--effect-jagoda::after {
+  box-shadow: 0 0 0 2px rgba(111, 148, 182, 0.5);
+}
+
+.cbutton--effect-jagoda::before,
+.cbutton--effect-jagoda::after {
+  -webkit-animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  animation-name: anim-effect-jagoda-2, anim-effect-jagoda-1;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
+  -webkit-animation-iteration-count: 5;
+
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.cbutton--effect-jagoda::after {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+@-webkit-keyframes anim-effect-jagoda-1 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-effect-jagoda-1 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  40%,
+  60% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim-effect-jagoda-2 {
+  0% {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+  }
+}
+
+@keyframes anim-effect-jagoda-2 {
+  0% {
+    -webkit-transform: scale3d(0.5, 0.5, 1);
+    transform: scale3d(0.5, 0.5, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1.4, 1.4, 1);
+    transform: scale3d(1.4, 1.4, 1);
+  }
+}
+
+@media (max-width: 480px) {
+  .live-icon {
+    height: 25px !important;
+  }
+  .live-p {
+    margin-right: 3px;
+    margin-top: 5px;
+    color: white;
+  }
+}

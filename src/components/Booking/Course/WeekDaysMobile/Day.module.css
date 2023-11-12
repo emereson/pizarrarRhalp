@@ -1,0 +1,77 @@
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  width: -webkit-fill-available;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.TimePicker input {
+  border: none;
+  font-size: 18px !important;
+  margin-top: 0px !important;
+  margin-left: 5px !important;
+  font-family: Square;
+}
+
+.icon {
+  width: 15px;
+  stroke: #fff;
+  stroke-width: 35px;
+}
+
+@media (max-width: 576px) {
+  .upArrow {
+    margin-bottom: 10px;
+  }
+
+  .txtFont {
+    font-size: 1.8rem !important;
+  }
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  margin-left: 5px !important;
+  margin-right: 10px !important;
+  font-family: Square;
+  font-size: 12px;
+}
+
+@media (max-width: 576px) {
+  .container {
+    font-size: 13px;
+  }
+
+  .time {
+    margin-left: 5px !important;
+    margin-right: 6px !important;
+    font-family: Square;
+    font-size: 10px;
+  }
+  .cls{
+    margin-left: 5px !important;
+  }
+  .icon {
+    width: 14px;
+  }
+}

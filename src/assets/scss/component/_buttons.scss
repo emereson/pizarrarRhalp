@@ -1,0 +1,11 @@
+.bran-btn {
+  transition: all 0.15s ease-in;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: scale(0.95);
+  }
+}

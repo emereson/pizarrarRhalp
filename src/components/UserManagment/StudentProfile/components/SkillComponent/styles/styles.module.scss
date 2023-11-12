@@ -1,0 +1,319 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+.containerRoseta {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+}
+.divSkills {
+  display: flex;
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.divInner {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.score {
+  display: flex;
+  position: absolute;
+  color: aliceblue;
+  font-size: 20px;
+  top: 65px;
+  z-index: 5;
+}
+
+.circleShadowRight {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #2605fb;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(-110%);
+  z-index: 1;
+}
+.circleShadowLeft {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #2605fb;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  transform: translateX(110%);
+  z-index: 1;
+}
+
+.SectorCircular {
+  position: absolute;
+  z-index: 5;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tests {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: 0px;
+  bottom: 13%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lineTests {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 5px;
+  width: 6.7vw;
+  left: 30px;
+}
+
+.buttonRight {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: 45px;
+  bottom: 1%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lineButtonRight {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 5px;
+  width: 6vw;
+  left: 19px;
+}
+
+.account {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  left: -10%;
+  bottom: 38%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lineAccount {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 4px;
+  width: 6.7vw;
+  left: 41px;
+}
+
+.lineOneCircle {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  right: -5.3%;
+  bottom: 52%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lineLeftOne {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 5px;
+  width: 6.7vw;
+  right: 18px;
+}
+
+.lineTwoCircle {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  right: 55px;
+  bottom: 1%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.lineLeftTwo {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 5px;
+  width: 5.5vw;
+  right: 20px;
+}
+
+.scores {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: -6px;
+  bottom: 13%;
+  font-size: 15px;
+  color: blue;
+  z-index: 10;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.containerScore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoresLine {
+  position: absolute;
+  border-bottom: 1px solid white;
+  top: 6px;
+  right: 37px;
+  width: 6.7vw;
+}
+
+.smallCircle {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.2);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.3);
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 70%;
+  }
+
+  .lineAccount {
+    width: 10vw;
+  }
+
+  .lineTests {
+    width: 10vw;
+  }
+
+  .lineLeftOne {
+    width: 10vw;
+  }
+
+  .scoresLine {
+    width: 10vw;
+  }
+
+  .lineLeftTwo {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    zoom: 0.8;
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .divImgLeft {
+    position: absolute;
+    top: -50px;
+    left: -100px;
+  }
+  .divImgRight {
+    position: absolute;
+    top: -50px;
+    left: 200px;
+  }
+
+  .circleShadowRight {
+    width: 100px;
+    height: 100px;
+    left: 80px;
+    z-index: -1;
+  }
+
+  .circleShadowLeft {
+    width: 100px;
+    height: 100px;
+    right: 80px;
+    z-index: -1;
+  }
+
+  .tests {
+    left: 8px;
+  }
+
+  .scores {
+    right: 0px;
+    bottom: 14%;
+  }
+
+  .scoresLine {
+    width: 10.5vw;
+  }
+
+  .lineOneCircle {
+    bottom: 49%;
+    right: -4.5%;
+  }
+
+  .lineTwoCircle {
+    bottom: 1%;
+    right: 56px;
+  }
+
+  .lineLeftTwo {
+    width: 13vw;
+  }
+
+  .buttonRight{
+    left: 59px;
+  }
+ 
+  .lineButtonRight {
+    width: 13vw;
+  }
+}

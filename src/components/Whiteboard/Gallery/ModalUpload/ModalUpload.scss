@@ -1,0 +1,53 @@
+@import 'assets/scss/main/_variables';
+
+.modal-drop-target {
+  background-color: red;
+}
+
+.modal-upload .modal-content {
+  height: 500px;
+  z-index: 1 !important;
+
+  @extend %mode-crystal;
+
+  .modal-body {
+    overflow-y: scroll;
+    z-index: 1 !important;
+    @extend %scrollbar-none;
+
+    .btn-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      button {
+        height: 100px;
+        width: 160px;
+        border: none;
+        border-radius: 10px;
+        color: rgb(25, 16, 157);
+        background-color: rgba(0, 196, 248, 0.4) !important;
+
+        p {
+          font-size: 18px;
+          margin: 0;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        button {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 75%;
+    height: 525px;
+    margin: 0 auto;
+  }
+}

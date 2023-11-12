@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*nuevo diseño del video chat*/
+
+.video-placeholde {
+  width: 220px;
+  height: 165px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.participant__option__btn {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.participant__option__btn > .icon-option {
+  width: 25px;
+  height: 20px;
+  display: block;
+  cursor: pointer;
+}
+
+/*caja de botones de accion del video*/
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .icon-option {
+    width: 13px;
+    height: auto;
+    margin-bottom: 10px;
+    margin: 2px;
+  }
+}
+
+@media screen and (min-width: 366px) and (max-width: 480px) {
+  .icon-option {
+    width: 13px;
+    height: auto;
+    margin-bottom: 10px;
+    margin: 2px;
+  }
+  #icon-option-micro,
+  #icon-option-plus {
+    width: 13px;
+    height: 17px;
+  }
+  .participant__option {
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+  }
+
+  .participant__option__btn:nth-child(4),
+  .participant__option__btn:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 365px) {
+  .icon-option {
+    width: 13px;
+    height: auto;
+    margin-bottom: 10px;
+    margin: 2px;
+  }
+
+  .participant__option__btn:nth-child(4),
+  .participant__option__btn:nth-child(5) {
+    display: none;
+  }
+  .participant__option__btn {
+    cursor: pointer;
+    outline: none;
+  }
+}

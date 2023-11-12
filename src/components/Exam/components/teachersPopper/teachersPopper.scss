@@ -1,0 +1,47 @@
+.popper-teachers {
+  --img-width: 300px;
+  --img-height: 160px;
+  --color-green: #61fb69;
+  --color-blue: #0033ff;
+  --color-light-contrast: #000000;
+  --color-light-alt: #969696;
+  --color-background-dark: #282c34;
+  --color-background-light: #ffffff;
+
+  --border-color: var(--color-green);
+  --border-color-light: var(--color-light-contrast);
+  --player-color: var(--color-green);
+  --player-color-light: var(--color-light-contrast);
+
+  background-color: var(--color-green) !important;
+
+  .popper-teachers-item {
+    color: var(--color-background-dark) !important;
+
+    &:hover {
+      background-color: #53d15a !important;
+    }
+
+    &:active {
+      background-color: #43ad48 !important;
+    }
+
+  }
+
+  &__light {
+    background-color: #ffffff7a !important;
+
+    .popper-teachers-item {
+      color: #0033ff !important;
+
+      &:hover {
+        background-color: #b8b8b8 !important;
+      }
+
+      &:active {
+        background-color: #0033ff !important;
+        color: #fff !important;
+      }
+    }
+  }
+}

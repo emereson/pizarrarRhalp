@@ -1,0 +1,45 @@
+type WhiteBoardEvent
+  @model
+  @key(name: "ByPage", fields: ["page", "updatedAt"], queryField: "shapesByPage") {
+  id: ID!
+  page: Int!
+  payload: AWSJSON!
+  updatedAt: String
+}
+
+type User @model @key(fields: ["id"]) {
+  id: ID!
+  name: String
+  email: String
+}
+
+type WhiteBoardEvent
+  @model
+  @key(name: "ByPage", fields: ["page", "updatedAt"], queryField: "shapesByPage") {
+  id: ID!
+  page: Int!
+  payload: AWSJSON!
+  updatedAt: String
+}
+
+type User @model @key(fields: ["id"]) {
+  id: ID!
+  name: String
+  email: String
+}
+
+type Student
+  @model
+  @key(fields: ["id"])
+  @key(name: "studentsByClassroomId", fields: ["classRoomId", "id"]) {
+  id: ID!
+  classRoomId: ID!
+}
+
+type ClassRoom @model @key(fields: ["id"]) {
+  id: ID!
+  page: Int
+  teacherId: ID!
+  teacher: User @connection(fields: ["teacherId"])
+  students: [Student] @connection(keyName: "studentsByClassroomId", fields: ["id"])
+}

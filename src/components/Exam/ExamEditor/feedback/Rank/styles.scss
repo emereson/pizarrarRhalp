@@ -1,0 +1,339 @@
+.english-test-admin-dashboard {
+  .Rank {
+    display: flex;
+    align-items: center;
+
+    .inputs-container {
+      color: var(--color-green);
+      font-size: 1.2rem;
+      width: 80px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__stroke {
+      color: var(--color-green);
+      width: fit-content;
+      margin-bottom: 4px;
+    }
+
+    &__id {
+      width: 15px;
+      height: 15px;
+      min-width: 15px;
+      min-height: 15px;
+      margin-right: 2.5px;
+      margin-left: 10px;
+      border-radius: 50%;
+      color: var(--color-green);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      margin-bottom: auto;
+      margin-top: 5px;
+      border: 1px solid var(--color-green);
+
+      &>p {
+        font-size: 1.05rem;
+        font-weight: bold;
+
+        @media screen and (max-width: 750px) {
+          & {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        & {
+          margin-left: 5px;
+        }
+      }
+
+      &__selected {
+        background-color: var(--color-green) !important;
+        color: black !important;
+        width: 15px;
+        height: 15px;
+        margin-right: 2.5px;
+        margin-left: 10px;
+        min-width: 15px;
+        min-height: 15px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        margin-bottom: auto;
+        margin-top: 5px;
+        border: 1px solid var(--color-green);
+
+        &>p {
+          font-size: 1.05rem;
+          font-weight: bold;
+
+          @media screen and (max-width: 750px) {
+            & {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        @media screen and (max-width: 750px) {
+          & {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin-left: 5px;
+            min-height: 20px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        & {
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          min-height: 20px;
+        }
+      }
+    }
+
+    &__input {
+      width: 30px;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: transparent !important;
+      text-align: center !important;
+      font-size: 1.05rem;
+      color: var(--color-green) !important;
+
+      &:focus {
+        outline: none;
+      }
+
+      @media screen and (max-width: 750px) {
+        & {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &__textarea-autosize {
+      width: 100%;
+      border: 1px solid transparent;
+      margin-bottom: 0;
+      border-color: transparent !important;
+
+      @media screen and (max-width: 750px) {
+        margin-bottom: 10px 0;
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      & {        
+        &__id {
+          margin: 0;
+          margin-right: 2.5px;
+          align-self: flex-start;
+
+          &__selected {
+            margin: 0;
+            margin-right: 2.5px;
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  .ranks-container {
+    .rank-tabs-container {
+      border: 1px solid var(--color-green) !important;
+
+      @media screen and (max-width: 750px) {
+        & {
+          justify-content: space-between;
+          padding: 5px;
+        }
+      }
+    }
+
+    .ranksTabs {
+      background-color: transparent !important;
+      border: transparent !important;
+      padding: 0;
+    }
+  }
+
+  // light theme
+  &__light {
+    .Rank {
+      display: flex;
+      align-items: center;
+
+      .inputs-container {
+        color: var(--color-light-contrast);
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80px;
+      }
+
+      &__stroke {
+        color: var(--color-blue);
+        width: fit-content;
+        margin-bottom: 4px;
+      }
+
+      &__id {
+        width: 15px;
+        height: 15px;
+        margin-right: 2.5px;
+        min-width: 15px;
+        min-height: 15px;
+        margin-left: 10px;
+        border-radius: 50%;
+        color: var(--color-light-alt);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-light-alt);
+
+        &>p {
+          font-size: 1.05rem;
+          font-weight: bold;
+
+          @media screen and (max-width: 750px) {
+            & {
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        &__selected {
+          color: #fff !important;
+          width: 15px;
+          height: 15px;
+          margin-right: 2.5px;
+          margin-left: 10px;
+          min-width: 15px;
+          min-height: 15px;
+          border-radius: 50%;
+          background-color: var(--color-blue) !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          // border: 1px solid var(--color-light-contrast);
+          &>p {
+            font-size: 0.95rem;
+            font-weight: bold;
+
+            @media screen and (max-width: 750px) {
+              & {
+                font-size: 1.2rem;
+              }
+            }
+          }
+
+          @media screen and (max-width: 750px) {
+            & {
+              width: 20px;
+              height: 20px;
+              min-width: 20px;
+              min-height: 20px;
+            }
+          }
+        }
+
+        @media screen and (max-width: 750px) {
+          & {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+          }
+        }
+      }
+
+      &__textarea-autosize {
+        width: 100%;
+        border: 1px solid transparent;
+        margin-bottom: 0;
+        border-color: transparent !important;
+
+        @media screen and (max-width: 750px) {
+          margin-bottom: 10px 0;
+        }
+      }
+
+      &__input {
+        width: 30px;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: transparent !important;
+        text-align: center !important;
+        font-size: 1.05rem;
+        color: var(--color-blue) !important;
+
+        &:focus {
+          outline: none;
+        }
+
+        @media screen and (max-width: 750px) {
+          & {
+            font-size: 1.3rem;
+          }
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        & {
+          &__id {
+            margin: 0;
+            margin-right: 2.5px;
+            margin-top: 5px;
+            margin-left: 5px;
+            align-self: flex-start;
+
+            &__selected {
+              margin: 0;
+              margin-right: 2.5px;
+              margin-top: 5px;
+              margin-left: 5px;
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    .ranks-container {
+      .rank-tabs-container {
+        border: 1px solid var(--color-light-contrast) !important;
+
+        @media screen and (max-width: 750px) {
+          & {
+            justify-content: space-between;
+            padding: 5px;
+          }
+        }
+      }
+
+      .ranksTabs {
+        background-color: transparent !important;
+        border: transparent !important;
+        padding: 0;
+      }
+    }
+  }
+}

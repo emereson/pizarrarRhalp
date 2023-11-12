@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "storage": {
+      "User:@model(appsync)": ["create", "read", "update", "delete"],
+      "Student:@model(appsync)": ["create", "read", "update", "delete"]
+    }
+  }
+}

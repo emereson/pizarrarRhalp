@@ -1,0 +1,321 @@
+@import 'assets/scss/main/_variables';
+
+* {
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.modal-save .modal-content {
+  min-height: 250px;
+  width: 670px;
+  box-sizing: border-box;
+  margin: auto;
+  border: none;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+
+  .modal-save-exam {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+  }
+
+
+  .modal-dialog {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    align-items: center;
+  }
+
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    h2 {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+      font-size: 20px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #8a8a8a;
+    }
+
+    .btn-container {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      a,
+      button {
+        height: 100px;
+        width: 200px;
+        border-radius: 8px;
+        margin: 0 20px;
+        border: none;
+        color: black !important;
+        background-color: rgba(0, 196, 248, 0.4) !important;
+
+        p {
+          font-size: 20px;
+          margin: 0;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:disabled {
+          cursor: default;
+
+          &:hover {
+            transform: none;
+          }
+        }
+
+        @media screen and (max-width: 750px) {
+          & {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+
+    .form-container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      margin-bottom: 0 !important;
+      padding: 10px;
+      text-align: left;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &>form {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .inputAndLabel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        label {
+          color: #0000ff;
+          font-weight: normal !important;
+        }
+
+        input {
+          -moz-appearance: textfield;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+      }
+
+      button {
+        border: none;
+        background-color: transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      form {
+
+        label,
+        p {
+          width: 28%;
+          text-transform: capitalize;
+          font-size: 1.3rem;
+          font-weight: 200;
+        }
+
+        p {
+          margin-bottom: 6px;
+          font-weight: 200;
+        }
+
+
+        .error {
+          width: 100%;
+          color: #cc0b0b;
+
+          .errortag {
+            width: 100%;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: none !important;
+          }
+        }
+
+        input {
+          width: 72%;
+          height: 30px;
+          background-color: transparent;
+          border: 1px solid #0000ff;
+          color: #0000ff;
+          padding-left: 5px;
+          font-size: 1.3rem;
+          font-weight: normal !important;
+
+          &:focus {
+            outline: none;
+          }
+
+          &.error {
+            border-color: red;
+          }
+        }
+
+        .input-number-arrows {
+          display: flex;
+          width: fit-content;
+          flex-direction: column;
+          position: absolute;
+          right: 25px;
+          margin-top: 0px;
+          cursor: pointer;
+
+          img {
+            margin: 2.5px 0;
+          }
+        }
+
+        .studentPopper {
+          width: 72%;
+          height: 30px;
+          background-color: transparent;
+          border: 1px solid #0000ff;
+          color: #0000ff;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 5px;
+
+
+          p {
+            margin-bottom: 0;
+            width: fit-content;
+            margin-right: 5px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &#no {
+            width: 15%;
+          }
+
+          &.error {
+            border-color: red;
+          }
+        }
+
+        .accordion {
+          margin: 20px 0;
+
+          .input-skill {
+            position: relative;
+            display: flex;
+            margin-bottom: 5px;
+
+            label {
+              width: 28%;
+              color: #0000ff;
+              font-weight: normal !important;
+            }
+
+            input {
+              width: 72%;
+              height: 30px;
+
+              @media screen and (max-width: 750px) {
+                & {
+                  margin-left: 25px;
+                }
+              }
+            }
+
+            .input-number-arrows {
+              display: flex;
+              width: fit-content;
+              flex-direction: column;
+              position: absolute;
+              right: 5px;
+              margin-top: 0px;
+              cursor: pointer;
+
+              img {
+                margin: 2.5px 0;
+              }
+            }
+          }
+
+          button {
+            display: block;
+            margin: auto;
+            text-align: center;
+
+            &.disabled {
+              cursor: default;
+              color: #0000009e;
+            }
+
+            img {
+              width: 20px;
+            }
+          }
+        }
+
+      }
+
+      .options {
+        width: 100%;
+        position: relative;
+        right: 0;
+        bottom: 5px;
+        left: 0;
+        display: inline-flex;
+        justify-content: space-between;
+
+        button {
+          font-size: 1.4rem;
+          font-weight: 200;
+        }
+      }
+    }
+
+    .files-gallery {
+      .file-container {
+        height: 120px;
+      }
+    }
+  }
+}

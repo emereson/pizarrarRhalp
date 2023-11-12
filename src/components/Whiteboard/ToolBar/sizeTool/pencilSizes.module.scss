@@ -1,0 +1,50 @@
+.circles{
+    background: #000;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+}
+
+.circles:active{
+    transform: scale(0.9);
+}
+
+.circleOne{
+    width: 15px;
+    height: 15px;
+}
+
+.circleTwo{
+    width: 20px;
+    height: 20px;
+}
+
+.circleThree{
+    width: 25px;
+    height: 25px;
+}
+
+.circleFour{
+    width: 30px;
+    height: 30px;
+}
+
+.circleFive{
+    width: 35px;
+    height: 35px;
+}
+
+.circleSix{
+    width: 41px;
+    height: 41px;
+}
+
+.circleSeven{
+    width: 47px;
+    height: 47px;
+}
+
+.circleEight{
+    width: 53px;
+    height: 53px;
+}

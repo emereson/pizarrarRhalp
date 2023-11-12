@@ -1,0 +1,248 @@
+@import 'assets/scss/main/_variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: zrnicFont;
+  src: url('./assets/fontNote.ttf');
+}
+
+// contiene todo el perfil del estudiante
+.studentProfile {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  // background-color: rgba(247, 5, 5, 0.5);
+  background-size: cover;
+}
+
+//contiene la mitad superior del perfil
+.divTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 53%;
+  // background-color: yellow;
+}
+
+.containerButtonControlPanelAdmin {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 7%;
+  width: 60%;
+  z-index: 99;
+}
+
+.containerButtonControlPanel {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 40%;
+  z-index: 99;
+}
+
+.divMiddle {
+  display: flex;
+  align-items: center;
+  height: 2%;
+  margin-top: 1%;
+  // background-color: black;
+}
+.divBotton {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 0px;
+  height: 40%;
+  overflow: hidden;
+  margin-bottom: 2vh;
+  // background-color: brown;
+}
+
+.containerProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 31.5%;
+  min-width: 250px;
+  height: auto;
+  padding-top: 25px;
+  z-index: 99;
+}
+
+.divNotes {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 28%;
+  min-width: 100px;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 3%;
+  margin-left: 40px;
+  margin-bottom: -57px;
+  z-index: 1000;
+}
+
+.topContainerProfile {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 100%;
+}
+.userForm {
+  margin-bottom: 20px;
+}
+
+.divSkillsGraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+  // background-color: aqua;
+}
+
+.containerButtomBottom {
+  display: none;
+}
+
+.userMenu {
+  display: flex;
+  text-align: left;
+  justify-content: left;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-left: 50px;
+  width: 300px;
+  color: blue;
+
+  ul {
+    list-style-image: url('./assets/listIcon.svg');
+  }
+}
+.titleN {
+  text-align: center;
+}
+
+.userInfo {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+@media screen and (min-height: 1000px) {
+  .divBotton {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .studentProfile {
+    zoom: 1.2;
+  }
+}
+@media (max-width: 900px) {
+  .studentProfile {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .containerButtomTop {
+    display: none;
+  }
+
+  .containerButtomBottom {
+    display: flex;
+    margin: 5px 0;
+  }
+
+  .divTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+  }
+
+  .divMiddle {
+    margin-top: 40px;
+  }
+
+  .divBotton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    padding: 0 10px;
+  }
+
+  .divSkillsGraph {
+    margin-top: 20px;
+    order: 3;
+    width: 100%;
+  }
+
+  .divNotes {
+    position: absolute;
+    right: 30px;
+    top: 200px;
+    width: 30%;
+    height: auto;
+    padding: 0;
+    order: 2;
+  }
+
+  .containerButtonControlPanelAdmin {
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .containerButtonControlPanel {
+    width: 95%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .containerProfile {
+    padding-top: 8px;
+  }
+
+  .divNotes {
+    right: 2%;
+    top: 12%;
+  }
+
+  .divSkillsGraph {
+    margin-top: 5px;
+  }
+
+  .containerButtomBottom {
+    display: flex;
+    margin: 34px 0 25px 0;
+    zoom: 0.8;
+  }
+
+  .containerButtonControlPanelAdmin {
+    margin-bottom: 15px;
+  }
+
+  .containerButtonControlPanel {
+    margin-bottom: 15px;
+  }
+}

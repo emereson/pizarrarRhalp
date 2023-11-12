@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'Digital-7';
+  src: url('../../assets/fonts/digital-7.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'BadScript';
+  src: url('../../assets/fonts/BadScript-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Futurette';
+  src: url('../../assets/fonts/Futurette-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'larabiefont';
+  src: url('../../assets/fonts/larabiefont.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'mvboli';
+  src: url('../../assets/fonts/mvboli.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'zektonit';
+  src: url('../../assets/fonts/zektonit.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'roundHand';
+  src: url('../../assets/fonts/RoundHand.ttf') format('truetype');
+}
+
+.container {
+  position: absolute;
+}
+
+.list {
+  cursor: pointer;
+}
+
+.typographyObj {
+  background: rgba(249, 132, 239, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  margin-left: 30px;
+  margin-top: 8px;
+  border-radius: 3px;
+  height: 99px;
+  overflow: auto;
+}
+
+.typographyObj::-webkit-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.typographyObj::-webkit-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.typographyObj::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+.typographyObj::-moz-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.typographyObj::-moz-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.typographyObj::-moz-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+.typographyObj::-o-scrollbar {
+  width: 8px;
+  padding: 2px 0;
+  display: block;
+}
+
+.typographyObj::-o-scrollbar-track {
+  background: transparent; /* Color de la pista del scrollbar */
+}
+
+.typographyObj::-o-scrollbar-thumb {
+  background-color: rgba(255, 69, 100, 0.2); /* Color del pulgar del scrollbar */
+  border-radius: 20px; /* Redondeo de las esquinas del pulgar */
+  border: transparent; /* Borde del pulgar */
+}
+
+@media screen and (max-width: 900px) {
+  .typographyObj li {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .list {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,217 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 5%;
+}
+
+.formTrue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 5%;
+}
+
+.typeNote {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.typeItem {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.typeLabel {
+  margin-right: 5px;
+  margin-bottom: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.typeRadio {
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #032993;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typeRadio:focus {
+  box-shadow: 0 0 5px rgba(3, 41, 147, 0.5);
+}
+
+.typeRadio::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #032993;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 100ms ease-in-out;
+}
+
+.typeRadio:checked:after {
+  opacity: 1;
+}
+
+.containerPeopleList {
+  width: 100%;
+  height: 25px;
+  padding: 5px 0;
+}
+
+.containerEditText {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fonts {
+  height: 18px;
+  width: 45px;
+  font-size: 12px;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin: 0 8px;
+  display: flex;
+}
+
+.selectTypography {
+  width: 25%;
+  background: transparent;
+  border: 0.5px solid #888;
+}
+
+.selectTypography:focus {
+  border: none;
+  outline: none;
+}
+
+.textArea {
+  height: 35%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: #032993;
+  resize: vertical;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #032993;
+}
+
+.inputDeadline {
+  background: none;
+  border: none;
+  color: #032993;
+  border-bottom: 1px solid #032993;
+  padding: 0;
+  width: 50%;
+}
+
+.inputDeadline:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #032993;
+}
+
+.labelDeadline {
+  margin-bottom: 0;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.containerDeadline {
+  margin: 10px 0;
+  height: 25px;
+}
+
+.buttonsEdit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4% 10% 0 10%;
+}
+
+.saveButton {
+  border: none;
+  background-color: transparent;
+}
+
+.textIcon {
+  width: auto;
+  height: 17px;
+  cursor: pointer;
+}
+
+.typingIcon {
+  width: auto;
+  height: 15px;
+  cursor: pointer;
+}
+
+.saveIcon {
+  width: auto;
+  height: 15px;
+  cursor: pointer;
+}
+
+.textIcon:active {
+  transform: scale(0.9);
+}
+
+.typingIcon:active {
+  transform: scale(0.9);
+}
+
+.saveIcon:active {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 900px) {
+  .containerDeadline {
+    display: flex;
+    justify-content: center;
+  }
+
+  .inputDeadline {
+    width: 80%;
+  }
+
+  .form {
+    display: none;
+  }
+
+  .formTrue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 5%;
+  }
+}
